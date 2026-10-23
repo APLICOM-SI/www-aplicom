@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: APLICOM/www-aplicom # TODO: dejanski GitHub repozitorij
+  repo: aplicom-si/www-aplicom
   branch: main
   commit_messages:
     create: 'Nov vnos {{collection}}: {{slug}}'
