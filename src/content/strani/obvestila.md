@@ -11,5 +11,3 @@ Obračun plače omogoča obračun zimskega regresa in poslovne uspešnosti, kot 
 Preverite, če imate v nastavitvah plač pravilno vnesene podatke o povprečni in minimalni plači v RS ter o minimalni osnovi za obračun prispevkov!
 
 **Če imate instalirano verzijo, ki je starejša od V6.10 R14, zaradi precej obsežne spremembe baze podatkov priporočamo zagon programa POPRBAZA!**
-
-**Test administracije.**
