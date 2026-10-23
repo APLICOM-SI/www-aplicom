@@ -10,9 +10,9 @@ const obvestila = await getEntry('strani', 'obvestila');
 const { Content: Obvestila } = obvestila ? await render(obvestila) : { Content: null };
 
 const podrocja = [
-  { ico: 'chart', naslov: 'Poslovanje in plače', opis: 'Posli pokrije partnerje, zaloge, fakturiranje, obračun plač, potne naloge, DDV in knjiženje.', href: '/prenosi/posli/' },
+  { ico: 'chart', naslov: 'Poslovanje in plače', opis: 'Program Posli pokrije partnerje, zaloge, fakturiranje, obračun plač, potne naloge, DDV in knjiženje.', href: '/prenosi/posli/' },
   { ico: 'users', naslov: 'Za računovodske servise', opis: 'Glavna knjiga, obresti, uvoz izpiskov in prenos podatkov od strank – vse za delo z več podjetji.', href: '/prenosi/glavna/' },
-  { ico: 'receipt', naslov: 'Blagajne in gostinstvo', opis: 'Blagajna za trgovine in ApPOS za gostinske lokale, z davčnim potrjevanjem in prenosom v Posli.', href: '/prenosi/appos/' },
+  { ico: 'receipt', naslov: 'Blagajne in gostinstvo', opis: 'Programa Blagajna za trgovine in ApPOS za gostinske lokale, z davčnim potrjevanjem računov in prenosom v program Posli.', href: '/prenosi/appos/' },
 ] as const;
 ---
 <Base>

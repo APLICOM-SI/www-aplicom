@@ -1,6 +1,6 @@
 ---
 naziv: "Posmin"
-kratek_opis: "Okrnjena različica programa Posli za storitvene dejavnosti, v paru z Blagajno."
+kratek_opis: "Okrnjena različica programa Posli za storitvene dejavnosti, ki deluje skupaj s programom Blagajna."
 kategorija: "Poslovanje"
 verzija: "V6.10 R14d"
 datum: "2026-10-22"
