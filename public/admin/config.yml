@@ -1,0 +1,169 @@
+# Administracija spletne strani (Decap CMS).
+# Polja morajo ostati usklajena s shemo v src/content.config.ts.
+
+backend:
+  name: github
+  repo: APLICOM/www-aplicom # TODO: dejanski GitHub repozitorij
+  branch: main
+  commit_messages:
+    create: 'Nov vnos {{collection}}: {{slug}}'
+    update: 'Posodobitev {{collection}}: {{slug}}'
+    delete: 'Brisanje {{collection}}: {{slug}}'
+    uploadMedia: 'Nalaganje datoteke {{path}}'
+    deleteMedia: 'Brisanje datoteke {{path}}'
+
+# Lokalno urejanje brez prijave (npm run cms + npm run dev) – na produkciji se ne uporablja.
+local_backend: true
+
+site_url: https://www.aplicom.si
+display_url: https://www.aplicom.si
+
+media_folder: public/media/uploads
+public_folder: /media/uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: programi
+    label: Programi
+    label_singular: Program
+    description: Programi na strani Prenosi. Ob novi verziji popravite verzijo, datum in naložite opis sprememb.
+    folder: src/content/programi
+    create: true
+    delete: true
+    slug: '{{naziv}}'
+    identifier_field: naziv
+    summary: "{{naziv}} — {{verzija}} ({{datum | date('D. M. YYYY')}}){{arhiv | ternary(' · ARHIV', '')}}"
+    sortable_fields: [vrstni_red, naziv, datum]
+    view_filters:
+      - { label: Aktualni, field: arhiv, pattern: false }
+      - { label: Arhiv, field: arhiv, pattern: true }
+    fields:
+      - { label: Naziv, name: naziv, widget: string }
+      - { label: Verzija, name: verzija, widget: string, required: false, hint: 'npr. V6.10 R14d' }
+      - label: Datum verzije
+        name: datum
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: D. M. YYYY
+        time_format: false
+        picker_utc: true
+        required: false
+      - label: Povezava za prenos
+        name: prenos
+        widget: string
+        required: false
+        hint: 'Polni naslov namestitvenega programa, npr. https://www.aplicom.org/prenosi/posliwin.exe'
+        pattern: ['^https://', 'Povezava mora začeti s https://']
+      - label: Zadnje spremembe (PDF ali TXT)
+        name: spremembe
+        widget: file
+        required: false
+        media_folder: /public/media/spremembe
+        public_folder: /media/spremembe
+        choose_url: true
+      - { label: Kratek opis (za kartico), name: kratek_opis, widget: text, required: false }
+      - label: Področje
+        name: kategorija
+        widget: select
+        required: false
+        options: [Poslovanje, Računovodstvo, Blagajna, Pripomočki]
+      - { label: Slika, name: slika, widget: image, required: false, media_folder: /public/media/slike, public_folder: /media/slike }
+      - { label: Vrstni red, name: vrstni_red, widget: number, value_type: int, default: 50, hint: 'Manjša številka = višje na seznamu' }
+      - { label: V arhivu, name: arhiv, widget: boolean, default: false, hint: 'Prikazan samo v Arhivu prenosov' }
+      - { label: Opis programa, name: body, widget: markdown, required: false }
+
+  - name: novice
+    label: Aktualno
+    label_singular: Novica
+    folder: src/content/novice
+    create: true
+    delete: true
+    slug: '{{naslov}}'
+    identifier_field: naslov
+    summary: "{{datum | date('D. M. YYYY')}} — {{naslov}}"
+    sortable_fields: [datum, naslov]
+    fields:
+      - { label: Naslov, name: naslov, widget: string }
+      - label: Datum
+        name: datum
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: D. M. YYYY
+        time_format: false
+        picker_utc: true
+      - { label: Povzetek, name: povzetek, widget: text, required: false, hint: 'Prikazan na seznamu novic' }
+      - { label: Besedilo, name: body, widget: markdown, required: false }
+
+  - name: strani
+    label: Strani
+    files:
+      - name: obvestila
+        label: Obvestila (Prenosi in domača stran)
+        file: src/content/strani/obvestila.md
+        fields:
+          - { label: Naslov, name: naslov, widget: hidden, default: Obvestila }
+          - label: Navodila za namestitev (PDF)
+            name: navodila
+            widget: file
+            required: false
+            media_folder: /public/media/navodila
+            public_folder: /media/navodila
+          - { label: Obvestila, name: body, widget: markdown, required: false, hint: 'Pustite prazno, če ni obvestil – okvir se takrat ne prikaže.' }
+      - name: o-nas
+        label: O nas
+        file: src/content/strani/o-nas.md
+        fields:
+          - { label: Naslov, name: naslov, widget: string }
+          - { label: Besedilo, name: body, widget: markdown }
+
+  - name: nastavitve
+    label: Cenik in podatki
+    files:
+      - name: cenik
+        label: Cenik
+        file: src/content/nastavitve/cenik.json
+        fields:
+          - { label: Veljavno od, name: veljavno_od, widget: datetime, format: YYYY-MM-DD, date_format: D. M. YYYY, time_format: false, picker_utc: true }
+          - label: Programi
+            name: programi
+            widget: list
+            summary: '{{oznaka}} — {{cena}} €'
+            fields:
+              - { label: Oznaka, name: oznaka, widget: string }
+              - { label: Opis, name: opis, widget: text }
+              - { label: Cena (EUR brez DDV), name: cena, widget: number, value_type: float }
+              - { label: Enota, name: enota, widget: string, required: false, hint: 'npr. /mesec – pustite prazno za enkratno ceno' }
+          - { label: Opomba pod cenikom programov, name: opomba_programi, widget: markdown, required: false }
+          - { label: Naslov razdelka e-računi, name: eracuni_naslov, widget: string }
+          - { label: Naslova stolpcev e-računov, name: eracuni_stolpca, widget: list, hint: 'Dva naslova, ločena z vejico' }
+          - label: E-računi
+            name: eracuni
+            widget: list
+            summary: '{{opis}}'
+            fields:
+              - { label: Vrsta licence, name: opis, widget: text }
+              - { label: Cena – eno podjetje, name: cena_eno, widget: number, value_type: float }
+              - { label: Cena – več podjetij, name: cena_vec, widget: number, value_type: float }
+          - { label: Opomba na dnu, name: opomba, widget: markdown, required: false }
+      - name: podjetje
+        label: Podatki podjetja
+        file: src/content/nastavitve/podjetje.json
+        fields:
+          - { label: Naziv, name: naziv, widget: string }
+          - { label: Slogan, name: slogan, widget: string }
+          - { label: Naslov, name: naslov, widget: string }
+          - { label: Pošta, name: posta, widget: string }
+          - { label: Telefoni, name: telefoni, widget: list }
+          - { label: E-pošta, name: email, widget: string }
+          - { label: Povezava za pomoč na daljavo, name: pomoc_url, widget: string }
+          - { label: Čas telefonske pomoči, name: pomoc_cas, widget: string }
+          - label: Kontaktne osebe
+            name: kontakti
+            widget: list
+            summary: '{{ime}}'
+            fields:
+              - { label: Ime in priimek, name: ime, widget: string }
+              - { label: E-pošta, name: email, widget: string }

@@ -1,0 +1,98 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import podjetje from '../content/nastavitve/podjetje.json';
+import { datum, zadnjePosodobitve } from '../lib/util';
+
+const zadnje = await zadnjePosodobitve(6);
+const obvestila = await getEntry('strani', 'obvestila');
+const { Content: Obvestila } = obvestila ? await render(obvestila) : { Content: null };
+
+const podrocja = [
+  { ico: 'chart', naslov: 'Poslovanje in plače', opis: 'Posli pokrije partnerje, zaloge, fakturiranje, obračun plač, potne naloge, DDV in knjiženje.', href: '/prenosi/posli/' },
+  { ico: 'users', naslov: 'Za računovodske servise', opis: 'Glavna knjiga, obresti, uvoz izpiskov in prenos podatkov od strank – vse za delo z več podjetji.', href: '/prenosi/glavna/' },
+  { ico: 'receipt', naslov: 'Blagajne in gostinstvo', opis: 'Blagajna za trgovine in ApPOS za gostinske lokale, z davčnim potrjevanjem in prenosom v Posli.', href: '/prenosi/appos/' },
+] as const;
+---
+<Base>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Računalniški inženiring Novo mesto</span>
+        <h1>Poslovni programi za <em>računovodske servise</em>, podjetja in obrtnike</h1>
+        <p class="lead">Od leta 1988 razvijamo programe, ki jim zaupa več kot 700 strank po Sloveniji. Ustvarjamo nove ideje – in jih sproti prilagajamo zakonodaji.</p>
+        <div class="ctas">
+          <a class="btn btn-light" href="/prenosi/"><Icon name="download" /> Zadnje verzije programov</a>
+          <a class="btn btn-outline-light" href="/ceniki/">Cenik</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <h2>Zadnje posodobitve</h2>
+        <ul>
+          {zadnje.map((p) => (
+            <li>
+              <a href={`/prenosi/${p.id}/`}>
+                <span class="n">{p.data.naziv}</span>
+                <span class="v">{p.data.verzija}<br />{datum(p.data.datum)}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="card stat"><b>od 1988</b><span>razvijamo poslovne aplikacije</span></div>
+      <div class="card stat"><b>700+</b><span>aktivnih strank v Sloveniji</span></div>
+      <div class="card stat"><b>60+</b><span>računovodskih servisov</span></div>
+    </div>
+  </div>
+
+  {Obvestila && (
+    <section class="section-tight" style="padding-top:40px">
+      <div class="wrap">
+        <div class="notice">
+          <h2><Icon name="alert" /> Pomembna obvestila</h2>
+          <div class="prose"><Obvestila /></div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Kaj ponujamo</h2>
+        <a href="/prenosi/">Vsi programi →</a>
+      </div>
+      <div class="grid grid-3">
+        {podrocja.map((p) => (
+          <div class="card feature">
+            <div class="ico"><Icon name={p.ico} /></div>
+            <h3>{p.naslov}</h3>
+            <p>{p.opis}</p>
+            <a href={p.href}>Več o programu →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="help-band">
+        <div>
+          <h2>Potrebujete pomoč?</h2>
+          <p>Telefonska pomoč {podjetje.pomoc_cas} za stranke z vzdrževalno pogodbo.</p>
+        </div>
+        <div class="ctas">
+          <a class="btn btn-light" href={`tel:+386${podjetje.telefoni[0].replace(/\D/g, '').replace(/^0/, '')}`}><Icon name="phone" /> {podjetje.telefoni[0]}</a>
+          <a class="btn btn-outline-light" href={podjetje.pomoc_url} target="_blank" rel="noopener"><Icon name="monitor" /> Pomoč na daljavo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

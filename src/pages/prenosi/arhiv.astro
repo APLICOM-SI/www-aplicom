@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProgramCard from '../../components/ProgramCard.astro';
+import { programi } from '../../lib/util';
+
+const vsi = await programi(true);
+---
+<Base title="Arhiv prenosov" description="Starejše verzije programov Aplicom.">
+  <section class="page-head">
+    <div class="wrap">
+      <div>
+        <div class="crumbs"><a href="/prenosi/">Prenosi</a> / Arhiv</div>
+        <h1>Arhiv prenosov</h1>
+        <p>Starejše verzije programov. Za novo namestitev uporabite <a href="/prenosi/" style="color:#fff">zadnje verzije</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid-3">
+        {vsi.map((p) => <ProgramCard p={p} />)}
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,61 @@
+---
+import { marked } from 'marked';
+import Base from '../layouts/Base.astro';
+import cenik from '../content/nastavitve/cenik.json';
+import { datum, evri } from '../lib/util';
+
+const md = (s?: string) => (s ? (marked.parseInline(s) as string) : '');
+const md_blok = (s?: string) => (s ? (marked.parse(s) as string) : '');
+---
+<Base title="Ceniki" description="Cenik programske opreme Aplicom in licenc za e-račune.">
+  <section class="page-head">
+    <div class="wrap">
+      <div>
+        <h1>Ceniki</h1>
+        <p>Cenik programske opreme, veljaven od {datum(new Date(cenik.veljavno_od))}. Cene ne vključujejo 22 % DDV.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <h2>Programska oprema</h2>
+      <div class="card table-wrap">
+        <table class="price-table">
+          <thead><tr><th>Program</th><th>Opis</th><th class="num">Cena</th></tr></thead>
+          <tbody>
+            {cenik.programi.map((r) => (
+              <tr>
+                <td class="code">{r.oznaka}</td>
+                <td class="desc" set:html={md(r.opis)} />
+                <td class="num">{evri(r.cena)}{r.enota && <span class="muted" style="font-weight:400">{r.enota}</span>}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {cenik.opomba_programi && <div class="prose muted" style="margin-top:16px" set:html={md_blok(cenik.opomba_programi)} />}
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <h2>{cenik.eracuni_naslov}</h2>
+      <div class="card table-wrap">
+        <table class="price-table multi">
+          <thead><tr><th>Vrsta licence</th><th class="num">{cenik.eracuni_stolpca[0]}</th><th class="num">{cenik.eracuni_stolpca[1]}</th></tr></thead>
+          <tbody>
+            {cenik.eracuni.map((r) => (
+              <tr>
+                <td class="code" style="white-space:normal">{r.opis}</td>
+                <td class="num" data-label="Eno podjetje">{evri(r.cena_eno)}</td>
+                <td class="num" data-label="Več podjetij">{evri(r.cena_vec)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {cenik.opomba && <div class="prose muted" style="margin-top:16px" set:html={md_blok(cenik.opomba)} />}
+    </div>
+  </section>
+</Base>

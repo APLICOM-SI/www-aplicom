@@ -1,0 +1,193 @@
+V6.07 R04, 28.2.2019
+
+Tehnološka posodobitev iskanja poslovnih partnerjev in materialov, ki prinese do 100x hitrejše iskanje.
+
+V6.07 R03, 11.03.2017
+
+Uvoz podatkov na temeljnice, iz programa POSLI, je bil v prejšnjih verijah na željo strank spremenjen.
+Pokazalo se je, da je to dobro samo za tiste, ki imajo redno prinešeno dokumentacijo v servis.
+Tako je uvoz na temeljnice iz programa POSLI in vrstni red dokumentov vrnjen na prejšnji naèin uvažanja.
+
+Dodani so novi izpisi.
+1. Pri knjiženju temeljnice (GK_010) je dodan izpis temeljnice v Excel obliko, poleg obstojeèega izpisa temeljnice.
+2. Pri "Izpisi finan. kartic" je dodan izpis za Excel "3.Karti saldo", za izpis kartice s saldom
+3. Pri "Izpisi fin. kartic 2" je dodan izpis št. "3.Karti.saldo", za izpis kartice konta s saldom na ležeèi A4
+
+V6.07 R02, 07.03.2017
+
+Odpravljena je napaka pri avtorizaciji GLAVNA. Poleg okna za avtorizacijo se je v oknu programa izpisalo opozorilo/napaka,
+ki sicer ni prepreèila avtorizacije, je pa bila neprijetna.
+
+
+Dopolnjen je izpis kontnega plana z dodatnimi izbirami pri izpisu.
+Izbirate lahko:
+1. Analitiène/Sintetiène (predlagano vse)
+2. Saldakontske/Nesaldakontske (predlagano vse)
+3. Posamezni razredi ali vse (predlagano vse)
+
+Dopolnjen je izpis Analitiène bruto-bilance v Excel obliko z dodatno izbiro:
+1. Analitièni/Sintetièni konti (predlagano vse)
+
+Šablone za zneske pri tem izpisu so podaljšane. Nekatere stranke so imele veèje skupne zneske, kot je prièakoval avtor programa.
+Prvi stolpec s številom znakov omogoèa filtriranje podatkov (vrtilne tabele, filtriranje) glede na število znakov konta.
+Na primer 1 za omejitev na razred, 2 za omejitev na skupino,...,6 za omejitev na analitiène konte
+
+Dopolnjeno je kniženje temeljnic (GK_010). Program sedaj pri uvozu podatkov dovoljuje tudi omejitev
+uvoza vknjižb glede na SM (stroškovno mesto). Tako lahko na loèene temeljnice uvažate
+(na primer) izdane fakture, prejete fakture za posamezno stroškovno mesto.
+Predlagano je, da se prenese VSE. Program tako deluje enako kot prej, v kolikor ne spremenite nastavitve.
+
+*************** Dodatno pojasnilo ***************
+Na knjiženju temeljnic (GK_010) se lahko aktivira posebni znesek, od katerega se odštevajo
+vknjižbe. Še posebej uporabno v primeru zapiranja enkratnega plaèila veè raèunov.
+Prejeli smo veliko klicev na temo "Kako se to naredi ?".
+Ko ste aktivirali program GK_010 - Knjiženje temeljnic z miško kliknite (zgoraj) na rubriko "Pomoè" in
+nato izberite "Navodila, ki so aktualna na tem mestu". Vse informacije so napisane in opremljene s slikami.
+*************************************************
+
+
+V6.07 R01, 28.02.2017
+
+Dodatna izpisa na "Izpisi finanènih kartic", ki gredo neposredno v (Excel) XLS obliko.
+Na izpisu odprtih postavk za (Excel) XLS obliko je dodano tudi stevilo dni zamude,
+ki olajša izdelavo poroèil glede na zapadlosti. Negativno stevilo dni pomeni, da
+odprta postavka še ni zapadla oziroma predstavlja število dni do zapadlosti.
+Dopolnjena pomoè na tipki F1.
+
+Odpravljena je napaka, ki je v nekaterih primerih zamaknila stolpce pri izpisu bruto blance v XLS obliko.
+
+V6.07 R00, 20.02.2017
+
+Poenoteno oznaèevanje verzij programa s POSLI.
+
+Dodatni izpisi za EXCEL preko CSV oblike, ki zagotavlja najširšo kompatibilnost
+med razliènimi verzijami programov.
+
+Na knjiženju temeljnic (GK_010) se lahko aktivira posebni znesek, od katerega se odštevajo
+vknjižbe. Še posebej uporabno v primeru zapiranja enkratnega plaèila veè raèunov.
+
+Pri vseh karticah je dodana možnost upoštevanja hierarhije stroškovnih mest na
+tri naèine.
+0 - upoštevajo se vknjižbe podanega SM (deluje enako kot doslej)
+1 - upoštevajo se vknjižbe samo podrjejenih SM ne pa tudi podanega SM
+2 - upoštevajo se vknjižbe podrejenih SM in tudi podanega SM
+
+V6.03 R10, 15.11.2013
+
+Analitièno bruti bilanco je možno prenesti v EXCEL (namesto, da se izpiše).
+ 
+V6.03 R08, 09.7.2013
+
+Manjši kozmetièni popravki in uskladitev številke verzije med aplikacijami.
+
+V6.03 R06, 30.05.2013
+
+Pri vstopu v definirane izpise je bilo onemogoèeno premikanje po podatkih.
+
+V6.02 R05f, 20.05.2013
+
+Odpravljena napaka, na pregledu in izpisu list.
+Pri vstopu v seznam list je program javil napako in ni pokazal seznama.
+
+
+V6.02 R05(a-e), 24.04.2013
+
+Verzija preurejena za uporabo enotnega kontnega okvirja.
+Manjši popravki imajo izdajo oznaèeno z a do e in odpravljajo manjše napake,
+ki pa nimajo nobenega vpliva na pravilnost dela s podatki.
+
+V6.02 R03, 27.10.2011
+
+- Možnost knjiženja temeljnic brez reorganizacije podatkov za pobote
+- Pri izdelavi definiranega izpisa program vpraša ali naj prikaže
+  izdelano XML/EXCEL datoteko. Primerno za uporabnike MS Office 2003 in
+  veè.
+
+V6.02 R02, 20.10.2011
+
+- Dopolnitve podatkov za izvajanje pobotov iz GLAVNE
+- Nova rubrika za knjiženje pobotov na osnovi odprtih
+  postavk in izdelavo prenosne datoteke za AJPES
+- V definiranih izpisih se hkrati z dosedanjim izpisom naredi tudi
+  XML/EXCEL oblika izpisa za lažjo obdelavo naprej
+
+V6.02 R01, 12.04.2011
+
+- Korekcija podatkov zaradi sprememb v programu POSLI
+- Dodatni izpis za lažje izpolnjevanje podatkov za obvezni pobot,
+  ki se nahaja na novem seznamu izpisov
+
+V6.00 R10, 31.05.2010
+
+- odpravljena napaka na izpisu podatkov GK za DURS. Napaka ni
+  vplivala na pravilnost pripravljenih podatkov za DURS ampak je
+  bil problem samo tehniène narave.
+
+V6.00 R09, 28.02.2010
+
+- optimizacija izracuna brutobilance (Obnovitev stanja), katere rezultat
+  je ekstremna pohitritev tega postopka
+- optimizacija izpisa kartice konta. Deluje samo v primeru, da je podan
+  zaèetni ali konèni konto
+- optimizacija izpisa kartice stranke. Deluje samo v primeru, da je
+  podana zaèetna ali konèna šifra stranke
+
+
+V6.00 R08, 09.02.2010
+
+- popravljena napaka matematiène knjižnice - eksponentne funkcije
+
+V6.00 R07, 18.01.2010
+
+- popravljena napaka pri avtorizacijah
+
+V6.00 R06, 15.01.2010
+
+- dopolnjena avtorizacija pri novih inštalacijah
+
+V6.00 R05, 15.01.2010
+
+- optimizacija zaklepanja zapisov
+- sprememba pri ekranskem pregledu definiranih izpisov (PDF predogled)
+
+V6.00 R04, 012.01.2010
+
+- uskladitev z dopolnitvami za program POSLI
+
+V6.00 R03, 07.01.2010
+
+- odpravljen problem pri zagonu programa na Windows98 - izkljuèena
+  grafika
+
+V6.00 R02, 06.01.2010   === WINDOWS VERZIJA ===
+
+- odpravljene manjše napake na sistemskih knjižnicah
+
+V6.00 R01, 01.01.2010   === WINDOWS VERZIJA ===
+
+- Sprememba programa na WIN okolje. Program ne deluje veè preko
+  DOS-a ampak je prava 32 bitna WIN aplikacija
+- Sprememba vrste indeksnih datotek zaradi lažjega povezovanja
+  z drugimi aplikacijami
+- Sprememba kratic uporabnikov zaradi lažjega razloèevanja starih
+  in novih podatkov
+- nekaj sprememb baze podatkov zaradi združljivosti z drugimi
+  programi "Skupine APLICOM"
+
+V5.12 R08, 31.12.2009
+
+- zadnja verzija za DOS okolje
+
+V5.12 R06, 05.05.2009
+
+- omogoèeno dodajanje uporabnika GK za uporabnike tipa D (društva)
+- poveèana rubrika veznega dokumenta na vknjižbah GK
+- spremenjeni izpisi zaradi poveèane rubrike veznega dokumenta
+
+V5.12 R05, 29.05.2008 
+
+- odpravljena napaka pri izdelavi definiranih izpisov
+
+V5.12 R04, 12.03.2008 
+
+- dodana možnost posredovanja podatkov DURS-u

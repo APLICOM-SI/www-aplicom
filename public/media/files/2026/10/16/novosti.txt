@@ -1,0 +1,708 @@
+PRNWND 3.02.23, 16.10.2026
+
+- popravek pri pošiljanju e-maila preko MAPI
+
+PRNWND 3.02.20, 12.3.2026
+
+- možnost definiranja vsebine sporočila v elektronski pošti s plačilnimi listami
+
+PRNWND 3.02.19, 13.1.2026
+
+- podpisovanje izpisa v PDF obliki s podpisno tablico ni delovalo pravilno, če je izpis vseboval več slik v BMP obliki
+
+PRNWND 3.02.18, 3.12.2025
+
+- dodana opcija pošiljanja e-pošte preko Outlooka (COM)
+
+PRNWND 3.02.17, 13.10.2025
+
+- dopolnitev pri podpisovanju s podpisno tablico
+
+PRNWND 3.02.16, 25.8.2025
+
+- dopolnitev pri delu s spletnimi potrdili za podpisovanje dokumentov
+- pošiljanje e-mailov preko Aplicomovega poštnega strežnika
+
+PRNWND 3.02.14, 14.9.2024
+
+- v primeru, da program nima pravice pisanja v izbrano izhodno mapo, za izhodno mapo postavi mapo 'Moji dokumenti'
+
+PRNWND 3.02.13, 3.6.2024
+
+- odpravljena je napaka pri pisanju na lokalni tiskalnik pri delu preko oddaljenega namizja (Remote Desktop)
+
+PRNWND 3.02.12, 15.3.2024
+
+- če ob zagonu programa privzeti tiskalnik ni bil aktiven, je program javil napako in ostal neodziven
+
+PRNWND V3.2.10, 22.8.2023
+
+- popravek pri interpretaciji ukazov za spremembo orientacije izpisane strani
+
+PRNWND V3.2.9, 25.2.2023
+
+- dopolnitev pri pošiljanje PDF dokumentov preko Aplicomovega SMTP strežnika
+
+PRNWND V3.2.7, 8.2.2023
+
+- omogočeno pošiljanje PDF dokumentov preko Aplicomovega SMTP strežnika
+
+PRNWND V3.2.5, 7.7.2022
+
+- program je javil napako, če računalnik ni imel dostopa do interneta
+
+PRNWND V3.2.4, 4.4.2022
+
+- manjša dopolnitev pri podpisovanju s podpisno tablico
+
+PRNWND V3.2.3, 23.3.2022
+
+- popravek pri pošiljanju elektronske pošte
+
+PRNWND V3.2.2, 17.2.2022
+
+- popravek pri vnosu nastavitev pošiljanja dokumentov po elektronski pošti
+
+PRNWND V3.2.1, 21.1.2022
+
+- kreirane elektronske dokumente lahko pošiljamo po elektronski pošti tudi preko 
+  SMTP protokola
+- program omogoča elektronsko podpisovanje kreiranih PDF dokumentov s podpisno 
+  tablico (Signotec)
+- če je za podpisovanje elektronskih dokumentov izbrano kvalificirano spletno 
+  potrdilo na kvalificirani napravi, program v PDF dokumentu kreira kvalificiran 
+  elektronski podpis; v veljavni zakonodaji je kvalificiran elektronski podpis 
+  ekvivalenten ročnemu podpisu
+
+PRNWND V3.1.21, 5.6.2018
+
+- dopolnjen izpis UPN QR naloga (dodan izpis IBAN, reference in naziva plačnika)
+
+PRNWND V3.1.20, 29.5.2018
+
+- odprava napake, do kater je prišlo v primeru, ko so bile vrstice izpisa daljše od 256 znakov 
+
+PRNWND V3.1.19, 8.5.2018
+
+- s posebnim ukazom v vhodni datoteki lahko postavimo zaščito z geslom v kreiranem izpisu v PDF obliki 
+
+PRNWND V3.1.18, 13.3.2018
+
+- na izpisu UPN QR / A4 je poleg pomika položnice omogočen tudi pomik QR kode na položnici
+- po izpisu dokumenta na tiskalnik lahko program dokument shrani tudi v PDF obliki v arhivsko mapo 
+
+PRNWND V3.1.16, 5.5.2017
+
+- omogočen izpis plačilnega naloga UPN QR 
+
+PRNWND V3.1.16, 5.5.2017
+
+- omogočen izpis plačilnega naloga UPN QR
+
+PRNWND V3.1.12, 25.2.2016
+
+- privzeta oblika izvoza izpisa iz predogleda je sedaj PDF (Adobe Reader)
+
+PRNWND V3.1.11, 25.2.2016
+
+- dopolnitev izpisovanja W-računov na lokalnem tiskalniku v okolju oddaljenega namizja
+
+PRNWND V3.1.09, 19.12.2015
+
+- dopolnitev izpisovanja W-računov na lokalnem
+  tiskalniku v okolju Oddaljenega namizja
+
+PRNWND V3.1.08, 26.11.2015
+
+- popravek pri izpisovanju v RAW formatu pri
+  tiskalnikih s širino papirja manjšo od 10 cm
+- popravek pri izpisovanju W-računov na lokalnem
+  tiskalniku v okolju Oddaljenega namizja
+
+PRNWND V3.1.06, 19.8.2015
+
+- popravek pri izpisovanju W-dokumentov preko VPN povezave
+
+PRNWND V3.1.05, 19.5.2015
+
+- popravek pri branju licence za podpisovanje
+
+PRNWND V3.1.04, 8.5.2015
+
+- v primeru, da izhodna mapa za izpis v 
+  PDF, RTF ali XLS obliki ne obstaja,
+  program shrani izpis v mapo Dokumenti
+
+PRNWND V3.1.03, 28.2.2015
+
+- dodana je možnost podpisovanja poljubnega PDF dokumenta 
+  (če je podpisovanje omogočeno)
+
+PRNWND V3.1.02, 21.1.2015
+
+- popravek pri prikazu izbranega spletnega potrdila
+
+PRNWND V3.1.01, 12.1.2015
+
+- za podpisovanje zdaj lahko izbiramo samo med tistimi
+  spletnimi potrdili, ki so namenjeni podpisovanju
+
+PRNWND V3.1.00, 19.12.2014
+
+- dopolnitev pri podpisovanju PDF dokumentov
+
+PRNWND V3.0.11, 1.9.2013
+
+- pri risanju slik so dimenzije namesto s
+  številom kolon/vrstic podane tudi v mm 
+
+  (Esc)GRAF#slika#XY
+
+  če je Y > 100, sta X in X podana v mm, drugače X pomeni 
+  število kolon, Y pa število vrstic, ki jih zaseda slika
+  
+
+PRNWND V3.0.10, 9.2.2013
+
+- program za določitev environment spremenljivke APLICOM_DOC
+  privzame uporabniško mapo "Moji dokumenti"
+
+PRNWND V3.0.09, 30.1.2013
+
+- program za določitev environment spremenljivke APLICOM_WRKDIR
+  privzame lokalno nastavitev spremenljivke TEMP
+
+PRNWND V3.0.08, 6.12.2012
+
+- dopolnitev postopka za izbiro tiskalnika
+
+PRNWND V3.0.07, 30.8.2012
+
+- v oknu z vizitko programa pomotoma ni bil prikazan gumb za
+  registracijo programa
+
+PRNWND V3.0.06, 5.6.2012
+
+- kreiranih izpisov v PDF (RTF,XLS) obliki program na nekaterih
+  računalnikih z Win64 operacijskih sistemih ni prikazal na ekranu
+
+PRNWND V3.0.05, 21.3.2012
+
+- program ni dovolil izpisa v PDF, čeprav je bil program registriran
+
+PRNWND V3.0.04, 30.12.2011
+
+- odpravljena napaka, ki je v nekaterih redkih primerih povzročila, 
+  da programa na noben način ni bilo možno registrirati 
+
+PRNWND V3.0.03, 14.10.2011
+
+- če pri pošiljanju izpisa preko e-maila v programu Outlook pride do
+  napake, program napako ignorira in nadaljuje z delom
+
+
+PRNWND V3.0.02, 19.9.2011
+
+- program je napačno detektiral trenutni proces kot "remote" in je
+  delovno področje (in nastavitve) postavil v napačno mapo na disku
+
+
+PRNWND V3.0.01, 7.9.2011
+
+- pri izpisu UPN položnic program izpisuje celoten tekst v pisavi
+  Courier New, čeprav je morebiti izbrana APL pisava; vzrok je
+  striktna zahteva verifikatorja (Inadvertising d.o.o), da mora biti
+  pisava zaradi optičnega prepoznavanja teksta na položnicah v pisavi
+  Courier New
+
+PRNWND V3.0.00, 28.5.2011
+
+- dodana je možnost podpisovanja kreiranih PDF dokumentov z digitalnim
+  potrdilom; možnost podpisovanja ni vključena v osnovno ceno programa 
+  in zahteva dodatno, posebej plačljivo licenco; program z registriranim
+  podpisovanjem avtomatsko podpisuje tudi izdane E-račune (E-račun
+  v E-slog XML in W-račun v PDF obliki)
+- registracijo programa lahko naredimo tudi z zunanjim programom Regi7.exe,
+  s katerim edino lahko registriramo program na računalnikih z Windows 7
+  operacijskim sistemom   (Start->Vsi programi->Aplicom->Prnwnd registracija)
+
+PRNWND V2.0.46, 19.1.2011
+
+- PDF datoteke, ki jih program naredi iz vhodnih izpisov v PRTA 
+  direktoriju, program namesto v mapi Moji dokumenti kreira v
+  sistemskem temporarnem direktoriju; če pa obstaja definirana
+  spremenljivka APLICOM_WRKDIR, PDF kreira v tej mapi
+
+PRNWND V2.0.45, 21.12.2010
+
+- sprememba pri izpisu UPN položnic
+
+PRNWND V2.0.44, 10.12.2010
+
+- nova verzija spet deluje na računalnikih z naloženim operacijskim
+  sistemom Windows 98 
+
+PRNWND V2.0.43, 8.12.2010
+
+- v primeru, da je bilo na računalniku definiranih več kot 10 
+  različnih tiskalnikov, je lahko program vse izpise prikazoval
+  v predogledu (APLIST)
+
+PRNWND V2.0.42, 22.11.2010
+
+- podpora za izpis UPN plačilnega naloga z izpisom vrstice OCR
+
+PRNWND V2.0.41, 15.10.2010
+
+- možnost definiranja in izpisa do 7 simbolov (grška abeceda);
+  trenutno je podprto samo izpisovanje preko programa PRNWND,
+  izpis v W-dokumentih še ni možen
+
+PRNWND V2.0.40, 6.9.2010
+
+- po registracij se program avtomatsko ponovno zažene
+- pri registraciji programa na računalnikih z sistemom Windows 7
+  program zahteva registracijo v administrativnem načinu
+
+PRNWND V2.0.39, 30.3.2010
+
+- izpis v PRTB na računalnikih z Win98 program ni deloval
+
+PRNWND V2.0.38, 23.3.2010
+
+- pri izpisu v PRTA program za generiranje PDF izpisov vedno
+  uporabi vgrajeno APL pisavo
+
+PRNWND V2.0.37, 4.3.2010
+
+- dopolnjen program za ekranski predogled izpisov (APList), ki
+  ga program PRNWND kliče, če izpisujemo v \PRTB mapo
+
+PRNWND V2.0.36, 13.2.2010
+
+- program vse datototeke, ki so poslani v mapo \PRTDIR\PRTB 
+  avtomatsko prikaže v predogledu; funkcionalnost je namenja
+  hitremu ekranskemu predogledu tekstovnih datotek v OEM formatu
+
+PRNWND V2.0.35, 2.1.2010
+
+- vse izpise, ki imajo ekstenzijo .NDR, program obravnava kot
+  izpise v NDR (Nevrona Design's RAVE) formatu
+
+PRNWND V2.0.34, 9.1.2010
+
+- pri delu z oddaljenim namizjem je program v nekaterih 
+  primerih pomotoma izpisal sporočilo 'xxx'
+
+PRNWND V2.0.33, 6.1.2010
+
+- odpravljena napak pri instalaciji na računalinik z Win98
+
+PRNWND V2.0.32, 6.1.2010
+
+- ob startu PRNWND avtomatsko postavlja tudi lokalno spremenljivko
+  APLICOM_PRTDIR, ki kaže na delovno področje
+
+PRNWND V2.0.31 24.11.2009
+
+- program vse izpise, ki so poslani v mapo \PRTDIR\PRTA avtomatsko
+  pretvori v PDF datoteko in jo prikaže na ekranu
+
+PRNWND V2.0.30 29.10.2009
+
+- zaradi težav z nekaterimi antivirusnimi programi program 
+  vse delovne datoteke kreira v mapi WRKDIR na delovnem  
+  področju programa
+
+
+PRNWND V2.0.29 14.9.2009
+
+- odpravljena napaka pri branju nastavitev programa
+
+PRNWND V2.0.28 10.6.2009
+
+- v namigu pri nastavitvah tiskalnika program
+  prikaže bistvene podatke iz dodatnih nastavitev
+  (izpis v PDF, RTF, XLS, ...)
+
+PRNWND V2.0.27 21.4.2009
+
+- če je privzeti program za e-pošto Outlook, PRNWND pri pošiljanju e-pošte program
+  Outlook vedno zažene (Sistemski dialog)
+- pri testnem pisanju program ni prikazal imen izbranih tiskalnikov
+
+PRNWND V2.0.26 26.3.2009
+
+- PRNWND lahko kreirano datoteko nespremenjeno pošlje po e-mailu; 
+  datoteko lahko pred pošiljanjem opcijsko stisne v ZIP format;
+  to možnost nastavimo v dodatnih nastavitvah -> RAW
+
+PRNWND V2.0.25 20.1.2009
+
+- program v določenih primerih ni pravilno obravnaval ukaza MAIL
+- odpravljena napaka pri delu v okolju terminalskih servisov
+
+PRNWND V2.0.23 5.9.2008
+
+- program podpira tudi izpise, narejene v kodni tabeli 1250
+
+PRNWND V2.0.22 3.7.2008
+
+- program je javil napako pri izpisu posebnih položnic, če je v nazivu
+  prejemnika obstajal znak '#'
+
+PRNWND V2.0.21 19.6.2008
+
+- spremenjen način pošiljanja izpisa po elektronski pošti
+
+PRNWND V2.0.20 15.4.2008
+
+- program pred izpisom kreira izhodno mapo, če le-ta ne obstaja 
+  (izpis v PDF, RTF ali XLS)
+- pri izpisu v PDF, RTF ali XLS obliko program vedno ustrezno doda ali spremeni
+  ekstenzijo izhodne datoteke (.PDF, .RTF ali .XLS)
+
+PRNWND V2.0.19 4.4.2008
+
+- v primeru, da na računalniku ni nameščene pisave Courier New (če je ni, je 
+  odstranjena, saj to pisavo originalni Windows sistem vsebuje), program 
+  za delo namesto te pisave uporabi vgrajeno Prnwnd pisavo
+
+PRNWND V2.0.18 15.12.2007
+
+- omogočen izvoz izpisa v XLS (Microsoft Excel) tabelo
+
+PRNWND V2.0.17 7.12.2007
+
+- odpravljene težave na računalnikih z operacijskim sistemom Microsoft Vista
+- nastavitev za terminalske servise in zakasnitev pri zagonu program VEDNO prebere
+  v osnovni mapi programa, čeprav deluje v okolju "remote session"
+
+PRNWND V2.0.16 7.11.2007
+
+- v primeru, da ime izhodne PDF ali RTF datoteke vsebuje tekst %FILENAME%, program pred 
+  kreiranjem izpisa tekst %FILENAME% zamenja z originalnim imenom vhodne datoteke.
+
+  n.pr.: datoteka za izpis: izpis.prn
+         poln naslov za izhodno datoteko: c:\Documents and Settings\Janez\%FILENAME%.pdf
+         dejansko ime izhodne datoteke: c:\Documents and Settings\Janez\izpis.pdf
+
+- program v primeru, da zazna delo v okolju terminalskih servisov, spremeni delovno 
+  področje tako, da ima vsaka prijava svoje delovno področje; dodana je možnost, da tak 
+  način delovanja programa preprečimo tako, da ostane delovno področje vedno enako
+
+PRNWND V2.0.15 15.10.2007
+
+- po prvi namestitvi programa na računalink z operacijskim sistemom Win2000, WinXP ali Vista
+  ni potrebno ponovno zagnati računalnika
+- privzeta mapa za izvoz izpisa v PDF ali RTF obiki je mapa "Moji dokumenti"
+- ob zagonu program kreira v uporabnikovi tabeli environment spremenljivko APLICOM_DOC,
+  ki kaže na mapo "Moji dokumenti" (v "short" obliki)
+
+PRNWND V2.0.14 15.09.2007
+
+- pri RAW tiskanju lahko nastavimo kopiranje izpisne datoteke na drug računalnik;
+  to možnost lahko uporabimo za tiskanje iz oddaljenega namizja na lokalni tiskalnik 
+  (seveda je potrebno v nastavitvah za oddaljeno namizje dovoliti dostop do lokalnih diskov)
+- če program pri tiskanju slike ne najde datoteke v mapi, podane v izpisu,
+  poskusi izpisati sliko s takim imenom v mapi APLICOM\PRNWND\PRTDIR\PICTURES
+
+PRNWND V2.0.13 24.07.2007
+
+- možnost subscript in superscript načina ( <Esc> S, <Esc> T )
+- reverse feed ( <Esc> j ) in advance vertical ( <Esc> J )
+
+PRNWND V2.0.12 21.06.2007
+
+- program je po izbiri APL* pisave in nato ponovni izbiri sistemske pisave, vedno izpisoval v APL* pisavi
+
+PRNWND V2.0.11 15.06.2007
+
+- možnost izpisovanja EAN13 črtne kode
+- možnost izbire alternativne PRNWND pisave 
+- v primeru izpisa s predogledom ali izpisa v RTF ali PDF obliki program
+  vedno izpiše samo eno kopijo
+
+PRNWND V2.0.10 7.5.2007
+
+- popravljen izpis podatkov na posebnih položnicah (zamiki pri nekaterih podatkih)
+
+PRNWND V2.0.09 10.04.2007
+
+- računalnike z Win98 je program obravnaval kot oddaljeno namizje
+
+PRNWND V2.0.08 06.04.2007
+
+- podpora za Remote Desktop
+
+PRNWND V2.0.07 12.02.2007
+
+- manjša velikost PDF datotek v primerih, ko v izpisu ni uporabljenih PRNWND pisav
+
+PRNWND V2.0.06 10.02.2007
+
+- možnost izbire vrste gonilnika pri RAW formatu za kreiranje datotek PRNWND.CFG
+
+PRNWND V2.0.05 26.01.2007
+
+- pri kreiranju PDF datoteke je program "odrezal" del teksta v primeru, da je bila na računalniku namesto običajne male pisave (96 dpi) izbrana velika pisava (120 dpi)
+
+PRNWND V2.0.04 06.12.2006
+
+- pri pisanju na tiskalnik je program napačno izpisal OCR tekst
+
+PRNWND V2.0.03 04.12.2006
+
+- po spremembi tiskanja v PDF (RTF) datoteko program program ni več pisal na tiskalnik (do naslednjega zagona programa)
+
+
+PRNWND V2.0.01-V2.0.02 21.11.2006
+
+- možnost izvoza v PDF
+- avtomatski ponovni zagon programa po potrditvi sprememb v nastavitvah
+- preverjanje tiskalnikov v nastavitvi programa
+- možnost nastavitve kreiranja konfiguracijske datoteke s podatki o tiskalnikih
+- možnost dodatnega opisa tiskalnika, ki se prikaže pri izbiri tiskalnika v testnem izpisu in zapiše v konfiguracijsko datoteko
+- program je pri tekstih, ki so se začeli z 'RAF' v mastnem tisku, izpustil prve tri znake; vzrok je bila 'escape' sekvenca GRAF
+  
+
+PRNWND V1.9.18 31.10.2006
+
+- možnost izpisa posebnih položnic PP02
+
+PRNWND V1.9.17 04.07.2006
+
+- odpravljena napaka pri uporavljanju s pomnilnikom ("memory leak" pri iskanju datotek)
+
+PRNWND V1.9.16 22.02.2006
+
+- v primeru, da nastavimo izhod tiskanja v RTF datoteko v mapo Moji dokumenti, program izpisne datoteke ni kreiral
+- okno za vnos izhodne datoteke je povečano (če je nastavljeno, da program vpraša za ime izhodne RTF datoteke)
+
+PRNWND V1.9.15 30.11.2005
+
+- možnost definiranja zakasnitve zagona programa ob startu sistema (prednastavljena vrednost: 15 s); vrednost < 0 pomeni, da se PRNWND ne starta ob zagonu sistema
+
+PRNWND V1.9.14 17.11.2005
+
+- možnost forsiranega izpisovanja v ležečem (landscape) formatu
+- pri izpisu v RTF datoteko je program pri dolgih nizih (>50 znakov) določil premajhnjo širino okvirja, v katerem je izpisal niz; posledica tega je bila, da se je niz zapisal v dveh vrsticah
+
+PRNWND V1.9.13 03.11.2005
+
+- odpravljena napaka pri pisanju na neaktivne omrežne tiskalnike
+  (Canvas not yet active)
+
+PRNWND V1.9.12 22.7.2005
+
+- pri izpisu slike je program v primeru, da slike ni mogel prebrati, izpisal znak '#'
+- pri predogledu izpisa program default prikaže izpis na celo širino (prej na celo stran)
+
+PRNWND V1.9.10-V1.9.11 10.2.2005
+
+- spremenjen način obravnave izpisnih datotek pri hitrem generiranju izpisov
+- odpravljena napaka pri pisanju posebnih položnic
+
+PRNWND V1.9.09, 01.01.2005
+
+- spreminjamo lahko našin izpisa pisave - kot true-type pisavo ali kot grafiko
+
+PRNWND V1.9.08, 30.11.2004
+
+- program ob startu ni brisal datotek, čakajočih na izpis, na tiskalnikih, ki niso bili definirani (default tiskalnik)
+
+PRNWND V1.9.06-V1.9.07, 20.07.2004 
+
+- posodobitev čarovnika za nadgradnjo
+- posodobitev namestitvenega programa
+- sprememba pri branju podatkov o registraciji programa pri uporabnikih brez administratorskih privilegijev
+
+PRNWND V1.9.05, 7.07.2004
+
+- za računalnike z Windows 98 sistemom dodana možnost pisanja v RAW formatu tudi na lokalni tiskalnik
+
+PRNWND V1.9.04, 26.06.2004
+
+- pri pisanju v RAW formatu program ni vedno izpisal vseh datotek; napaka se je pojavljala predvsem na počasnih računalnikih ali pri izpisih, ki jih je program kreiral dalj časa.
+
+PRNWND V1.9.03, 04.06.2004
+
+- program je v primeru, da se je v izpisu pojavil ukaz za poudarjen izpis (Esc + G), takoj za njim pa tekst, ki se je začel z RAF..., to kombinacijo napačno interpretiral, tako da teksta RAF ni izpisal 
+
+PRNWND V1.9.02, 11.03.2004
+
+- če je bil program nameščen na računalnikih Win 2000/XP s prijavo brez pooblastil (power user, administrator), registracije programa ni bilo možno opraviti
+
+- podpora tiskalnikom, ki imajo možnost obojestranskega tiskanja (duplex)
+
+PRNWND V1.9.01, 03.02.2004
+
+- podpora tiskalnikom, ki imajo možnost obojestranskega tiskanja (duplex)
+
+PRNWND V1.9.00, 24.9.2003
+
+- možnost izpisovanja v RAW formatu; program v tem primeru pošilja izpisno datoteko neposredno na tiskalnik in mimo obstoječega gonilnika za Windows; primerno za matrične tiskalnike, priključene na printerske strežnike
+
+PRNWND V1.7.10.0-1.8.00, 20.6.2003
+
+- če izpisujemo datoteko s klicem programa (xprnwnd), program izpisno datoteko po
+  uspešnem izpisu izbriše samo, če se le-ta nahaja na delovnem področju programa PRNWND
+
+PRNWND V1.7.9.0, 18.6.2003
+
+- možnost izpisa testne strani na tiskalnikih
+- nastavitev števila kopij izpisa na tiskalniku
+- možnost mastnega izpisa teksta v stisnjeni (kondenzirani) obliki
+
+PRNWND V1.7.8.0, 5.5.2003
+
+- odpravljena napaka pri pošiljanju izpisa po E-pošti preko programa Outlook
+
+
+PRNWND V1.7.7.0, 5.4.2003
+
+- odpravljena napaka v primeru, da v izpisu ni bilo teksta (velikost 0 bytov)
+- pri pisanju v ležečem formatu je program na koncu izpisa dodatno izpisal prazen list
+- pri klicu programa s parametri na računalnikih z Win95/98 program ni vedno pravilno obdelal parametre
+
+PRNWND V1.7.3.0 - V1.7.6.0, 13.02.2003
+
+- program avtomatsko preskoči n novo stran, če izpisna vrstica prekorači natisljivi spodnji del lista papirja
+- možnost izpisa znaka za EURO in FI (premer)
+- možnost vertikalnega pozicioniranje OCR pisave na posebnih položnicah
+- odprava napake pri predogledu na računalnikih z malo delovnega spomina ( < 32MB )
+- program pri izpisu posebne položnice avtomatsko izpiše predolge tekste nazivov in namena v komprimirani obliki
+
+PRNWND V1.7.2.0, 20.12.2002
+
+- možnost izpisa posebnih položnic
+
+PRNWND V1.6.0.0, 23.11.2002
+
+- pri kondenzirani pisavi ali pisavi z dvojno širino se je sorazmerno zmanjšala  (povečala) tudi višina posameznih črk; program PRNWND zdaj omogoča. da so črke pri kondenziranem izpisu (ali pri dvojni širini) enake višine, kot črke pri normalnem izpisu; za tako obliko izpisovanja moramo v dodatnih nastavitvah tiskalnika izbrati "Uporabi PRNWND pisavo"
+- pri hitrem zaporednem izpisovanju se je včasih zgodilo, da program izpisa ni poslal na tiskalnik
+- programu PRNWND lahko kličemo s parametri; pogoj za to je, da je PRNWND aktiven (ikona s programom se nahaja v orodni vrstici)
+- klicanje PRNWND s parametri
+
+Program kličemo z naslednjim ukazom:
+
+xprnwnd ime_izpisne_datoteke [parameter1] [parameter2] [...]
+
+ime_datoteke  - izpisna datoteka v tekstovni (formatirani) obliki
+
+parametri, ki ji lahko podajamo so naslednji:
+
+/STOP   - ustavi izvajanje programa PRNWND
+/ACTIVE - PRNWND postane aktiven
+/NOACTIVE - PRNWND postane neaktiven
+/PRINTER=n - izpis na tiskalniku n (n=1..9)
+/EMAIL=email - E-pošta prejemnika izpisa; obvezno moramo podati ime izpisne datoteke in številko tiskalnika (/PRINTER=n), le-ta pa MORA BITI NASTAVLJEN za pošiljanje E-pošte
+/NOMAILDLG - pri pošiljanju E-pošte ne prikaže dialoga
+
+Če podamo samo ime izpisne datoteke, program le-to izpiše na tiskalniku številka 1.
+
+Primeri:
+
+xprnwnd c:\temp\izpis.prn /printer=9 /email=info@aplicom.si /nomaildlg 
+xprnwnd /stop
+xprnwnd /active
+xprnwnd c:\temp\izpis.prn
+ 
+PRNWND V1.5.6.0, 30.08.2002
+
+- pri izpisu v RTF datoteko je v nekaterih primerih program napačno določil širino
+  izpisanega teksta, zaradi česar je premaknil preostanek teksta v novo vrstico
+
+PRNWND V1.5.5.0, 04.07.2002
+
+- dodana avtomatska konverzija kodne table OEM v ANSI (pretvorba DOS tabele v Windows
+  tabelo) za vse znake, ki niso šumniki ali znaki za risanje okvirjev.
+ 
+PRNWND V1.5.4.0, 26.04.2002
+
+- pravilna interpretacija escape sekvence za SO (Shift Out) in DC4 (Enlarged mode
+  Cancel)
+- pošiljanje na E-mail je možno samo v primeru, da je izbran izpis v datoteko
+- če je izbran izpis v datoteko in ni podano ime izhodne datoteke, program
+  avtomatsko postavi ime izhodne datoteke na 'PRNWND.RTF' v Windows temporarni mapi
+- program po izpisu na 'e-mail' tiskalnik ni več izpisoval na druge tiskalnike,
+  ampak ga je bilo potrebno ponovno zagnati
+- program V1.5.1.0 ni pravilno interpretiral ležečega formata (landscape)
+
+PRNWND V1.5.1.0, 16.04.2002
+
+- možnost pošiljanja izpisa preko E-pošte; v dodatnih nastavitvah moramo 
+  nastaviti izhod v RTF in označiti pošiljanje datoteko po E-pošti;
+- izpis v RTF je sedaj spremenjen in lahko v RTF datoteko pišemo tudi
+  slike (n.pr. podpise na računih)
+
+PRNWND V1.4.0.0, 23.02.2002
+
+- odpravljena napaka pri izpisu prve strani v ležečem formatu
+- odpravljena napaka pri hitrem zaporednem izpisu v RTF datoteko
+- možnost shranitve izpisa in ponovnega vpogleda in izpisa (samo na predogledu)
+
+PRNWND V1.3.2.0, 11.11.2001
+
+- določeni tiskalniki (HP Laserjet 1000W, Minolta Magicolor 2220) so zaradi
+  napake v gonilniku napačno interpretirali ukaz za novo stran, tako da
+  so se vse strani večstranskih izpisov izpisali na eno samo stran;
+  
+PRNWND V1.3.0.0, 26.11.2001
+
+- dodana možnost testiranja novejše verzije programa preko interneta
+- dodana podpora za delo v okolju Microsoft Windows Terminal Services
+- možnost postavitve ukaznih sekvenc za vsak tiskalnik posebej
+- odpravljena napaka napačne interpretacije znaka CR (Carriage Return)
+
+PRNWND V1.1.8.0, 12.07.2001
+
+- če postavimo program v neaktivno stanje, se po ponovnem zagonu računalnika 
+  program postavi v neaktivno stanje; morebitne izpise, ki smo jih poslali za
+  izpis, program tiska šele po ponovni aktivaciji programa.
+
+PRNWND V1.1.7.1, 20.06.2001
+
+- program je ukaz za "dvojno širino" v stisnjenem izpisu napačno interpretiral,
+  tako da je bila širina ene črke z "dvojno širino" manjša od dveh črk "normalne
+  širine"; posledica napake je bila napačno pozicioniranje v vrstici
+- v primeru, da je bil izpis maksimalno stisnjen, je program črte v velikosti dvojne
+  širine napačno izpisoval
+
+PRNWND V1.1.6.0, 14.05.2001
+
+- program ne zahteva več obvezne izbire tiskalnikov; v primeru, da nimamo 
+  izbranega tiskalnika, program piše na default tiskalnik.
+
+PRNWND V1.1.5.0, 17.04.2001
+
+- program je INIT ukaz interpretiral kot znak in ga je izpisal
+- prvo vrstico na prvi strani je v določenih primerih program zamaknil za en znak
+  v desno
+
+PRNWND V1.1.4.0, 11.04.2001
+
+- program je napačno interpretiral ukaz za ležeči (landscape) format, tako
+  da je take izpise izpisoval v pokončnem (portrait) formatu.
+
+PRNWND V1.1.3.0, 02.04.2001
+
+- pri kondenziranih izpisih je program napačno izpisoval grafične znake za črte
+  (APLSymbol)
+
+PRNWND V1.1.2.0, 31.03.2001
+
+- neregistriran program je pri nekaterih gonilnikih za tiskalnik povzročil
+  napako PCL XL Error
+
+PRNWND V1.1.1.1, 15.03.2001
+
+- pred izpisom v RTF datoteko program preveri, ali lahko preusmeri 
+  izpis v podano datoteko na disku; v primeru, da datoteko uporablja
+  drug uporabnik, prikaže sporočilo in ne izpiše datoteke;
+- izpis v RTF datoteko zdaj pravilno izpisuje razmak med vrsticami;
+  prej je višina vrstice bila odvisna od velikosti največjega fonta, 
+  zdaj pa je višina vrstice fiksna in je odvisna od podane escape sekvence.
+- pri spremembi velikosti fonta je program v določenih primerih nepravilno
+  pozicioniral začetek stringa v vrstici;
+  

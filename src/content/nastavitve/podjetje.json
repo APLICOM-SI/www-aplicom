@@ -1,0 +1,39 @@
+{
+  "naziv": "Aplicom d.o.o.",
+  "slogan": "Računalniški inženiring Novo mesto",
+  "naslov": "Turkova ulica 26",
+  "posta": "8000 Novo mesto",
+  "telefoni": [
+    "07 33 42 420",
+    "07 33 41 026"
+  ],
+  "email": "aplicom@aplicom.si",
+  "pomoc_url": "https://www.islonline.net/start/ISLLightClient",
+  "pomoc_cas": "vsak delovni dan od 9:00 do 12:00",
+  "kontakti": [
+    {
+      "ime": "Splošne informacije o programski opremi",
+      "email": "aplicom@aplicom.si"
+    },
+    {
+      "ime": "Svetlana Maksimovič",
+      "email": "svetlanam@aplicom.si"
+    },
+    {
+      "ime": "Andreja Žnidaršič",
+      "email": "andrejaz@aplicom.si"
+    },
+    {
+      "ime": "Zlatko Avbar",
+      "email": "zlatkoa@aplicom.si"
+    },
+    {
+      "ime": "Franc Pučko",
+      "email": "francp@aplicom.si"
+    },
+    {
+      "ime": "Metod Saje",
+      "email": "metods@aplicom.si"
+    }
+  ]
+}

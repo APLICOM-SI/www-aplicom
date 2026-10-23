@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import podjetje from '../../content/nastavitve/podjetje.json';
+
+const zemljevid = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${podjetje.naslov}, ${podjetje.posta}`)}`;
+---
+<Base title="Kontakt" description="Kontaktni podatki podjetja Aplicom d.o.o., Novo mesto.">
+  <section class="page-head">
+    <div class="wrap">
+      <div>
+        <h1>Kontakt</h1>
+        <p>Pišite nam ali pokličite – telefonska pomoč {podjetje.pomoc_cas}.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid grid-2" style="align-items:start">
+      <div class="grid" style="gap:20px">
+        <div class="card card-pad">
+          <h2 style="font-size:1.2rem">{podjetje.naziv}</h2>
+          <div class="info-row"><Icon name="pin" /><p>{podjetje.naslov}<br />{podjetje.posta}<br /><a href={zemljevid} target="_blank" rel="noopener">Pokaži na zemljevidu</a></p></div>
+          <div class="info-row"><Icon name="phone" /><p>{podjetje.telefoni.map((t, i) => <>{i > 0 && <br />}<a href={'tel:+386' + t.replace(/\D/g, '').replace(/^0/, '')}>{t}</a></>)}</p></div>
+          <div class="info-row" style="margin:0"><Icon name="monitor" /><p><a href={podjetje.pomoc_url} target="_blank" rel="noopener">Pomoč na daljavo (ISL Online)</a></p></div>
+        </div>
+        <div class="card card-pad">
+          <h2 style="font-size:1.2rem">Elektronska pošta</h2>
+          <ul class="contact-list">
+            <li><span class="who">Splošne informacije</span><a href={`mailto:${podjetje.email}`}>{podjetje.email}</a></li>
+            {podjetje.kontakti.map((k) => <li><span class="who">{k.ime}</span><a href={`mailto:${k.email}`}>{k.email}</a></li>)}
+          </ul>
+        </div>
+      </div>
+
+      <div class="card card-pad">
+        <h2 style="font-size:1.2rem">Pošljite sporočilo</h2>
+        <form class="form" name="kontakt" method="POST" action="/kontakt/hvala/" data-netlify="true" netlify-honeypot="naslov-url">
+          <input type="hidden" name="form-name" value="kontakt" />
+          <p class="hp"><label>Ne izpolnjujte: <input name="naslov-url" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="row-2">
+            <div><label for="f-ime">Ime in priimek</label><input id="f-ime" name="ime_priimek" required autocomplete="name" /></div>
+            <div><label for="f-podjetje">Podjetje</label><input id="f-podjetje" name="podjetje" autocomplete="organization" /></div>
+          </div>
+          <div><label for="f-email">E-pošta</label><input id="f-email" name="email" type="email" required autocomplete="email" /></div>
+          <div><label for="f-sporocilo">Sporočilo</label><textarea id="f-sporocilo" name="sporocilo" required></textarea></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+            <small>Podatke uporabimo samo za odgovor na vaše sporočilo.</small>
+            <button class="btn btn-primary" type="submit"><Icon name="mail" /> Pošlji</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,54 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { datum, zunanja } from '../../lib/util';
+
+export async function getStaticPaths() {
+  const vsi = await getCollection('programi');
+  return vsi.map((p) => ({ params: { id: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const d = p.data;
+const { Content } = await render(p);
+const imaOpis = (p.body ?? '').trim().length > 0;
+---
+<Base title={d.naziv} description={d.kratek_opis ?? `${d.naziv} – prenos zadnje verzije programa.`}>
+  <section class="page-head">
+    <div class="wrap">
+      <div>
+        <div class="crumbs"><a href="/prenosi/">Prenosi</a>{d.arhiv && <> / <a href="/prenosi/arhiv/">Arhiv</a></>} / {d.naziv}</div>
+        <h1>{d.naziv}</h1>
+        {d.kratek_opis && <p>{d.kratek_opis}</p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap detail-grid">
+      <div class="card card-pad">
+        {imaOpis ? <div class="prose"><Content /></div> : <p class="muted" style="margin:0">Opis programa bo dodan v kratkem. Za več informacij nas <a href="/kontakt/">kontaktirajte</a>.</p>}
+      </div>
+
+      <aside class="detail-aside">
+        <div class="card card-pad">
+          <dl>
+            {d.verzija && <><dt>Verzija</dt><dd>{d.verzija}</dd></>}
+            {d.datum && <><dt>Datum</dt><dd><time datetime={d.datum.toISOString().slice(0, 10)}>{datum(d.datum)}</time></dd></>}
+            {d.kategorija && <><dt>Področje</dt><dd>{d.kategorija}</dd></>}
+          </dl>
+          {d.prenos && <a class="btn btn-download btn-block" href={d.prenos} rel="noopener"><Icon name="download" /> Prenesi {d.naziv}</a>}
+          {d.spremembe && <a class="btn btn-ghost btn-block" href={d.spremembe} target={zunanja(d.spremembe) ? '_blank' : undefined} rel="noopener"><Icon name="file" /> Zadnje spremembe</a>}
+          {d.prenos && (
+            <div class="signed">
+              <Icon name="shield" />
+              <span>Namestitveni program je digitalno podpisan s certifikatom Aplicom d.o.o.</span>
+            </div>
+          )}
+        </div>
+        {d.slika && <img src={d.slika} alt={`${d.naziv} – zaslonska slika`} class="card" style="padding:8px;display:block" loading="lazy" />}
+      </aside>
+    </div>
+  </section>
+</Base>

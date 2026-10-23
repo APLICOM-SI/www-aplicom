@@ -1,0 +1,101 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import podjetje from '../content/nastavitve/podjetje.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = 'Aplicom d.o.o. – poslovni programi za računovodske servise, mala podjetja in obrtnike. Posli, Glavna, Blagajna, Obresti, Prnwnd, Meduza.' } = Astro.props;
+const fullTitle = title ? `${title} | Aplicom` : 'Aplicom – poslovni programi za podjetja in računovodske servise';
+
+const nav = [
+  { href: '/prenosi/', label: 'Prenosi' },
+  { href: '/aktualno/', label: 'Aktualno' },
+  { href: '/ceniki/', label: 'Ceniki' },
+  { href: '/o-nas/', label: 'O nas' },
+  { href: '/kontakt/', label: 'Kontakt' },
+];
+const path = Astro.url.pathname;
+const current = (href: string) => (path.startsWith(href) ? 'page' : undefined);
+const tel = (t: string) => 'tel:+386' + t.replace(/\D/g, '').replace(/^0/, '');
+---
+<!doctype html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b2537" />
+  </head>
+  <body>
+    <a class="sr-only" href="#vsebina">Preskoči na vsebino</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="/" aria-label="Aplicom – domov">
+          <img src="/assets/img/logo.png" alt="Aplicom" width="225" height="60" />
+        </a>
+        <nav class="nav nav-desktop" aria-label="Glavni meni">
+          {nav.map((n) => <a href={n.href} aria-current={current(n.href)}>{n.label}</a>)}
+          <a class="btn btn-sm btn-outline-light" style="margin-left:8px" href={podjetje.pomoc_url} target="_blank" rel="noopener">
+            <Icon name="monitor" /> Pomoč na daljavo
+          </a>
+        </nav>
+        <details class="nav-toggle">
+          <summary aria-label="Odpri meni"><Icon name="menu" /></summary>
+          <nav class="nav" aria-label="Glavni meni">
+            <a href="/">Domov</a>
+            {nav.map((n) => <a href={n.href} aria-current={current(n.href)}>{n.label}</a>)}
+            <a href={podjetje.pomoc_url} target="_blank" rel="noopener">Pomoč na daljavo</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="vsebina">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <img src="/assets/img/logo.png" alt="Aplicom" width="150" height="40" style="height:34px;width:auto;margin-bottom:14px" />
+            <address>
+              {podjetje.naziv}<br />
+              {podjetje.naslov}, {podjetje.posta}<br />
+              Tel.: {podjetje.telefoni.map((t, i) => <>{i > 0 && ', '}<a href={tel(t)}>{t}</a></>)}<br />
+              E-pošta: <a href={`mailto:${podjetje.email}`}>{podjetje.email}</a>
+            </address>
+          </div>
+          <div>
+            <h2>Strani</h2>
+            <ul>
+              {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+            </ul>
+          </div>
+          <div>
+            <h2>Podpora</h2>
+            <ul>
+              <li><a href="/prenosi/">Zadnje verzije programov</a></li>
+              <li><a href={podjetje.pomoc_url} target="_blank" rel="noopener">Pomoč na daljavo (ISL Online)</a></li>
+              <li><a href="/prenosi/arhiv/">Arhiv prenosov</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© {new Date().getFullYear()} {podjetje.naziv}. Vse pravice pridržane.</span>
+          <span>{podjetje.slogan}</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+---
+import Icon from './Icon.astro';
+import { datum, jeNov, zunanja, type Program } from '../lib/util';
+
+interface Props { p: Program }
+const { p } = Astro.props;
+const d = p.data;
+const iskanje = [d.naziv, d.kratek_opis, d.kategorija].filter(Boolean).join(' ').toLowerCase();
+---
+<article class="card program" data-kategorija={d.kategorija ?? ''} data-iskanje={iskanje}>
+  <div class="program-top">
+    <h3><a href={`/prenosi/${p.id}/`}>{d.naziv}</a></h3>
+    {jeNov(d.datum) ? <span class="badge badge-new">Novo</span> : d.kategorija && <span class="badge badge-cat">{d.kategorija}</span>}
+  </div>
+  <p class="desc">{d.kratek_opis ?? ''}</p>
+  <div class="meta">
+    {d.verzija && <span>Verzija <strong>{d.verzija}</strong></span>}
+    {d.datum && <span><time datetime={d.datum.toISOString().slice(0, 10)}>{datum(d.datum)}</time></span>}
+    <a class="more" href={`/prenosi/${p.id}/`} aria-label={`Podrobnosti – ${d.naziv}`}>Več →</a>
+  </div>
+  <div class="actions">
+    {d.prenos && (
+      <a class="btn btn-download btn-sm" href={d.prenos} rel="noopener" download>
+        <Icon name="download" /> Prenos
+      </a>
+    )}
+    {d.spremembe && (
+      <a class="btn btn-ghost btn-sm" href={d.spremembe} target={zunanja(d.spremembe) ? '_blank' : undefined} rel="noopener" title="Zadnje spremembe">
+        <Icon name="file" /> Spremembe
+      </a>
+    )}
+  </div>
+</article>

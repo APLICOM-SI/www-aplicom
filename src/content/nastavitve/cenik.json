@@ -1,0 +1,155 @@
+{
+  "veljavno_od": "2026-01-01",
+  "programi": [
+    {
+      "oznaka": "POSLI",
+      "opis": "Vsi moduli programa POSLI.",
+      "cena": 550.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "GLAVNA",
+      "opis": "Glavna knjiga s stroškovnimi mesti.",
+      "cena": 180.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "BLAGAJNA",
+      "opis": "Registrska blagajna.",
+      "cena": 140.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "OBRESTI",
+      "opis": "Izračun obresti.",
+      "cena": 115.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI + GLAVNA + OBRESTI",
+      "opis": "Kompletno poslovanje za podjetja ali samostojne podjetnike z dvostavnim knjigovodstvom. Obresti so v celotnem paketu brezplačno.",
+      "cena": 690.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - FAKTUR",
+      "opis": "Fakturiranje, predračuni, dobavnice, virmani.",
+      "cena": 165.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - MATERI",
+      "opis": "POSLI-OSNOVA + sestavnice in kalkulacije sestavnic, delovni nalogi.",
+      "cena": 330.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - OSNOVA",
+      "opis": "Fakturiranje, predračuni, dobavnice, spremljava materialnih in splošnih stroškov. Knjiga prihodkov in odhodkov, izdelava virmanov in položnic.",
+      "cena": 215.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - OSNOVA + DDV OBDELAVA (KIR/KPR)",
+      "opis": "Fakturiranje, predračuni, dobavnice, spremljava materialnih in splošnih stroškov. Knjiga prihodkov in odhodkov, izdelava virmanov in položnic. DDV-obdelava (oddaja KIR/KPR)",
+      "cena": 270.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - OSNSRED",
+      "opis": "Osnovna sredstva.",
+      "cena": 165.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - POTNAL",
+      "opis": "Potni nalogi.",
+      "cena": 70.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - STROSK",
+      "opis": "Spremljava materialnih in splošnih stroškov, izdelava virmanov in položnic.",
+      "cena": 165.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - TRGOVI",
+      "opis": "POSLI-OSNOVA + nabavne kalkulacije, spremljava splošnih stroškov, trgovska knjiga, obračuna davka.",
+      "cena": 330.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "POSLI - PLAČE",
+      "opis": "Obračun plač, obračun prispevkov za samostojne podjetnike, pošiljanje REK na eDavke",
+      "cena": 215.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "PRNWND",
+      "opis": "Program za izpis na Windows tiskalnike, predogled izpisov, pretvorba izpisov v PDF, RTF ali XML, pošiljanje izpisov po e-pošti, podpisovanje izpisanih PDF dokumentov.",
+      "cena": 77.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "MEDUZA",
+      "opis": "Letna licenca za uporabo podatkov o vseh poslovnih subjektih v RS, osveževana mesečno, z možnostjo neposrednega dostopa iz programov POSLI, GLAVNA, OBRESTI in BLAGAJNA.",
+      "cena": 93.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "INVENTURA",
+      "opis": "Program za izdelavo inventurnega zapisnika v programu POSLI (maloprodaja in veleprodaja).",
+      "cena": 100.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "INVENTURA za Blagajno",
+      "opis": "Inventura v trgovini s samostojno Blagajno",
+      "cena": 50.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "UVOZ IZPISKOV",
+      "opis": "Uvoz izpiskov iz elektronske banke, Zbirnega centra ali eRačuna (prejete fakture) v program POSLI (enoletna licenca).",
+      "cena": 174.0,
+      "enota": ""
+    },
+    {
+      "oznaka": "APLWOO",
+      "opis": "Povezava med Posli in spletno trgovino WooCommerce",
+      "cena": 25.0,
+      "enota": "/mesec"
+    },
+    {
+      "oznaka": "POMOČ (MINUTA)",
+      "opis": "Pomoč preko internetne povezave (razen v primeru, ko program v rdečem okvirju javi napako). **Minimalni obračunski interval je 15 minut.**",
+      "cena": 1.2,
+      "enota": ""
+    }
+  ],
+  "opomba_programi": "Za storitve izven delovnega časa se zaračuna dodatek v višini 30%, za storitve po 20h, ob sobotah, nedeljah in praznikih pa 50%.",
+  "eracuni_naslov": "E-računi",
+  "eracuni_stolpca": [
+    "Letna licenca za eno podjetje (do dve davčni številki)",
+    "Letna licenca za več podjetij (računovodski servis)"
+  ],
+  "eracuni": [
+    {
+      "opis": "Elektronsko podpisovanje e-računov in PDF dokumentov",
+      "cena_eno": 17.0,
+      "cena_vec": 52.0
+    },
+    {
+      "opis": "Lokalno arhiviranje e-računov, podpisovanje dokumentov je vključeno v ceni",
+      "cena_eno": 35.0,
+      "cena_vec": 104.0
+    },
+    {
+      "opis": "Neposredno pošiljanje podpisanih e-računov na UJP preko Mikrografije ali BizBox, lokalno arhiviranje s podpisovanjem je vključeno v ceni",
+      "cena_eno": 52.0,
+      "cena_vec": 156.0
+    }
+  ],
+  "opomba": "Dodatna instalacija je 70% cene programa razen za programa BLAGAJNA in INVENTURA.\n\nNajmanjša možna cena dodatne instalacije je 150 EUR.\n\nVse cene v cenikih so v EUR in veljajo do preklica (za točne cene na dan nakupa se pozanimajte prek telefona). V cenah ni vračunan 22% davek na dodano vrednost (DDV)."
+}

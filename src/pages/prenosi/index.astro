@@ -1,0 +1,85 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import ProgramCard from '../../components/ProgramCard.astro';
+import { programi } from '../../lib/util';
+
+const vsi = await programi(false);
+const kategorije = [...new Set(vsi.map((p) => p.data.kategorija).filter(Boolean))] as string[];
+const obvestila = await getEntry('strani', 'obvestila');
+const { Content: Obvestila } = obvestila ? await render(obvestila) : { Content: null };
+---
+<Base title="Prenosi" description="Zadnje verzije programov Aplicom: Posli, Glavna, Blagajna, ApPOS, Obresti, Prnwnd, Meduza in drugi.">
+  <section class="page-head">
+    <div class="wrap">
+      <div>
+        <h1>Prenosi</h1>
+        <p>Zadnje verzije naših programov. Vsi namestitveni programi so digitalno podpisani s certifikatom Aplicom d.o.o.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        {obvestila?.data.navodila && <a class="btn btn-outline-light btn-sm" href={obvestila.data.navodila} target="_blank" rel="noopener"><Icon name="file" /> Navodila za namestitev</a>}
+        <a class="btn btn-outline-light btn-sm" href="/prenosi/arhiv/"><Icon name="archive" /> Arhiv prenosov</a>
+      </div>
+    </div>
+  </section>
+
+  {Obvestila && (
+    <section class="section-tight">
+      <div class="wrap">
+        <div class="notice">
+          <h2><Icon name="alert" /> Obvestila</h2>
+          <div class="prose"><Obvestila /></div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="toolbar">
+        <div class="chips" role="group" aria-label="Kategorija">
+          <button class="chip" type="button" data-kat="" aria-pressed="true">Vsi</button>
+          {kategorije.map((k) => <button class="chip" type="button" data-kat={k} aria-pressed="false">{k}</button>)}
+        </div>
+        <label class="search">
+          <span class="sr-only">Iskanje programa</span>
+          <Icon name="search" />
+          <input id="iskanje" type="search" placeholder="Poišči program…" autocomplete="off" />
+        </label>
+      </div>
+      <div class="grid grid-3" id="programi">
+        {vsi.map((p) => <ProgramCard p={p} />)}
+      </div>
+      <p class="empty" id="ni-zadetkov" hidden>Ni programov, ki bi ustrezali iskanju.</p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const input = document.getElementById('iskanje') as HTMLInputElement;
+  const chips = [...document.querySelectorAll<HTMLButtonElement>('.chip')];
+  const cards = [...document.querySelectorAll<HTMLElement>('#programi > .program')];
+  const empty = document.getElementById('ni-zadetkov')!;
+  let kat = '';
+
+  function filter() {
+    const q = input.value.trim().toLowerCase();
+    let n = 0;
+    for (const c of cards) {
+      const ok = (!kat || c.dataset.kategorija === kat) && (!q || c.dataset.iskanje!.includes(q));
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    empty.hidden = n > 0;
+  }
+
+  input.addEventListener('input', filter);
+  for (const chip of chips) {
+    chip.addEventListener('click', () => {
+      kat = chip.dataset.kat ?? '';
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+      filter();
+    });
+  }
+</script>

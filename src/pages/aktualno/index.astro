@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { datum } from '../../lib/util';
+
+const novice = (await getCollection('novice')).sort((a, b) => b.data.datum.getTime() - a.data.datum.getTime());
+---
+<Base title="Aktualno" description="Novice in obvestila o programih Aplicom ter spremembah zakonodaje.">
+  <section class="page-head">
+    <div class="wrap">
+      <div>
+        <h1>Aktualno</h1>
+        <p>Novice o naših programih in spremembah predpisov, ki vplivajo nanje.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="news-list">
+        {novice.map((n) => (
+          <a class="card news-item" href={`/aktualno/${n.id}/`}>
+            <time datetime={n.data.datum.toISOString().slice(0, 10)}>{datum(n.data.datum)}</time>
+            <div>
+              <h2>{n.data.naslov}</h2>
+              {n.data.povzetek && <p>{n.data.povzetek}</p>}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
