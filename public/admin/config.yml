@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: aplicom-si/www-aplicom
+  repo: APLICOM-SI/www-aplicom
   branch: main
   commit_messages:
     create: 'Nov vnos {{collection}}: {{slug}}'
