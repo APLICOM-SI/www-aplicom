@@ -11,7 +11,7 @@ vrstni_red: 5
 arhiv: false
 ---
 
-POS gotovinska blagajna. Deluje v povezavi s programom POSLI.
+POS gotovinska blagajna. Deluje v povezavi s programom Posli.
 
 Osnovne funkcije programa:
 
@@ -23,7 +23,7 @@ Osnovne funkcije programa:
 - podpora za darilno kartico Supernova
 - povezava s programom Meduza
 - vodenje dnevnih zaključkov
-- avtomatski prenos dnevne prodaje v program POSLI
+- avtomatski prenos dnevne prodaje v program Posli
 - izpisi prodaje (po delavcih)
 - možnost prijave prodajalcev s pomočjo RFID čitalca
 - podpora za grafične prikazovalnike / monitorje

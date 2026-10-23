@@ -2,8 +2,8 @@
   "veljavno_od": "2026-01-01",
   "programi": [
     {
-      "oznaka": "POSLI",
-      "opis": "Vsi moduli programa POSLI.",
+      "oznaka": "Posli",
+      "opis": "Vsi moduli programa Posli.",
       "cena": 550.0,
       "enota": ""
     },
@@ -26,61 +26,61 @@
       "enota": ""
     },
     {
-      "oznaka": "POSLI + GLAVNA + OBRESTI",
+      "oznaka": "Posli + GLAVNA + OBRESTI",
       "opis": "Kompletno poslovanje za podjetja ali samostojne podjetnike z dvostavnim knjigovodstvom. Obresti so v celotnem paketu brezplačno.",
       "cena": 690.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - FAKTUR",
+      "oznaka": "Posli - FAKTUR",
       "opis": "Fakturiranje, predračuni, dobavnice, virmani.",
       "cena": 165.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - MATERI",
-      "opis": "POSLI-OSNOVA + sestavnice in kalkulacije sestavnic, delovni nalogi.",
+      "oznaka": "Posli - MATERI",
+      "opis": "Posli-OSNOVA + sestavnice in kalkulacije sestavnic, delovni nalogi.",
       "cena": 330.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - OSNOVA",
+      "oznaka": "Posli - OSNOVA",
       "opis": "Fakturiranje, predračuni, dobavnice, spremljava materialnih in splošnih stroškov. Knjiga prihodkov in odhodkov, izdelava virmanov in položnic.",
       "cena": 215.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - OSNOVA + DDV OBDELAVA (KIR/KPR)",
+      "oznaka": "Posli - OSNOVA + DDV OBDELAVA (KIR/KPR)",
       "opis": "Fakturiranje, predračuni, dobavnice, spremljava materialnih in splošnih stroškov. Knjiga prihodkov in odhodkov, izdelava virmanov in položnic. DDV-obdelava (oddaja KIR/KPR)",
       "cena": 270.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - OSNSRED",
+      "oznaka": "Posli - OSNSRED",
       "opis": "Osnovna sredstva.",
       "cena": 165.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - POTNAL",
+      "oznaka": "Posli - POTNAL",
       "opis": "Potni nalogi.",
       "cena": 70.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - STROSK",
+      "oznaka": "Posli - STROSK",
       "opis": "Spremljava materialnih in splošnih stroškov, izdelava virmanov in položnic.",
       "cena": 165.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - TRGOVI",
-      "opis": "POSLI-OSNOVA + nabavne kalkulacije, spremljava splošnih stroškov, trgovska knjiga, obračuna davka.",
+      "oznaka": "Posli - TRGOVI",
+      "opis": "Posli-OSNOVA + nabavne kalkulacije, spremljava splošnih stroškov, trgovska knjiga, obračuna davka.",
       "cena": 330.0,
       "enota": ""
     },
     {
-      "oznaka": "POSLI - PLAČE",
+      "oznaka": "Posli - PLAČE",
       "opis": "Obračun plač, obračun prispevkov za samostojne podjetnike, pošiljanje REK na eDavke",
       "cena": 215.0,
       "enota": ""
@@ -93,13 +93,13 @@
     },
     {
       "oznaka": "MEDUZA",
-      "opis": "Letna licenca za uporabo podatkov o vseh poslovnih subjektih v RS, osveževana mesečno, z možnostjo neposrednega dostopa iz programov POSLI, GLAVNA, OBRESTI in BLAGAJNA.",
+      "opis": "Letna licenca za uporabo podatkov o vseh poslovnih subjektih v RS, osveževana mesečno, z možnostjo neposrednega dostopa iz programov Posli, GLAVNA, OBRESTI in BLAGAJNA.",
       "cena": 93.0,
       "enota": ""
     },
     {
       "oznaka": "INVENTURA",
-      "opis": "Program za izdelavo inventurnega zapisnika v programu POSLI (maloprodaja in veleprodaja).",
+      "opis": "Program za izdelavo inventurnega zapisnika v programu Posli (maloprodaja in veleprodaja).",
       "cena": 100.0,
       "enota": ""
     },
@@ -111,7 +111,7 @@
     },
     {
       "oznaka": "UVOZ IZPISKOV",
-      "opis": "Uvoz izpiskov iz elektronske banke, Zbirnega centra ali eRačuna (prejete fakture) v program POSLI (enoletna licenca).",
+      "opis": "Uvoz izpiskov iz elektronske banke, Zbirnega centra ali eRačuna (prejete fakture) v program Posli (enoletna licenca).",
       "cena": 174.0,
       "enota": ""
     },

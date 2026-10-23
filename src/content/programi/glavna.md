@@ -18,7 +18,7 @@ arhiv: false
 - katalog poslovnih partnerjev
 - kontni plan (skupni ali za posameznega uporabnika)
 - planiranje prometa za konto
-- izdelavo temeljnic z možnostjo avtomatskega prenosa podatkov iz programa POSLI
+- izdelavo temeljnic z možnostjo avtomatskega prenosa podatkov iz programa Posli
 - definiranje lastnih poročil
 - pregledi stanja konta, kontne kartice
 - izpis bruto bilance, kartice, dnevnika, kartice stranke,..

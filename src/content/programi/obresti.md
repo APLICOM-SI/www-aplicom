@@ -17,7 +17,7 @@ Poleg osnovnega obračuna obresti program vsebuje še:
 - anutetni izračun za obe obliki izračuna anuitete,
 - možnost hranjenja obračunov obresti,
 - izračun obresti za več različnih podjetij (uporabnikov),
-- prenos podatkov za obračun obresti iz programov POSLI ali GLAVNA,
+- prenos podatkov za obračun obresti iz programov Posli ali GLAVNA,
 - priprava podatkov za prenos izračunanih obresti v dvostavno knjiženje,
 - osveževanja podatkov o zakonsko določenih zamudnih obresti preko interneta,
 - arhiviranje podatkov
@@ -29,4 +29,4 @@ Program **OBRESTI** je Windows verzija programa v stari obliki. Program zajema:
 - izračun zamudnih obresti po konformni, linearni ali zakonsko določeni metodi
 - anuitetni izračun z ispisom anuitetnega načrta
 - vzdrževanje podatkov (izdelavo rezervnih kopij,indeksiranje, itd)
-- možnost uvoza podatkov za obračun obresti iz programov POSLI ali GLAVNA
+- možnost uvoza podatkov za obračun obresti iz programov Posli ali GLAVNA

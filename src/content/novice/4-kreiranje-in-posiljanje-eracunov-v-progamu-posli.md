@@ -1,5 +1,5 @@
 ---
-naslov: "Kreiranje in pošiljanje eRačunov v progamu POSLI"
+naslov: "Kreiranje in pošiljanje eRačunov v programu Posli"
 datum: "2015-01-13"
 ---
 

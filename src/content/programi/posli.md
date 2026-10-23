@@ -10,7 +10,7 @@ vrstni_red: 1
 arhiv: false
 ---
 
-**Program POSLI zajema:**
+**Program Posli zajema:**
 
 - katalog poslovnih partnerjev,
 - katalog materialov in storitev, ki so predmet poslovanja, vključno s sestavnicami za poizdelke in izdelke,
