@@ -10,9 +10,9 @@ const obvestila = await getEntry('strani', 'obvestila');
 const { Content: Obvestila } = obvestila ? await render(obvestila) : { Content: null };
 
 const podrocja = [
-  { ico: 'chart', naslov: 'Poslovanje in plače', opis: 'Program Posli pokrije partnerje, zaloge, fakturiranje, obračun plač, potne naloge, DDV in knjiženje.', href: '/prenosi/posli/' },
-  { ico: 'users', naslov: 'Za računovodske servise', opis: 'Glavna knjiga, obresti, uvoz izpiskov in prenos podatkov od strank – vse za delo z več podjetji.', href: '/prenosi/glavna/' },
-  { ico: 'receipt', naslov: 'Blagajne in gostinstvo', opis: 'Programa Blagajna za trgovine in ApPOS za gostinske lokale, z davčnim potrjevanjem računov in prenosom v program Posli.', href: '/prenosi/appos/' },
+  { ico: 'chart', naslov: 'Poslovanje in plače', opis: 'Program Posli pokrije partnerje, zaloge, fakturiranje, obračun plač, potne naloge, DDV in knjiženje.' },
+  { ico: 'users', naslov: 'Za računovodske servise', opis: 'Glavna knjiga, obresti, uvoz izpiskov in prenos podatkov od strank – vse za delo z več podjetji.' },
+  { ico: 'receipt', naslov: 'Blagajne in gostinstvo', opis: 'Programa Blagajna za trgovine in ApPOS za gostinske lokale, z davčnim potrjevanjem računov in prenosom v program Posli.' },
 ] as const;
 ---
 <Base>
@@ -74,7 +74,6 @@ const podrocja = [
             <div class="ico"><Icon name={p.ico} /></div>
             <h3>{p.naslov}</h3>
             <p>{p.opis}</p>
-            <a href={p.href}>Več o programu →</a>
           </div>
         ))}
       </div>

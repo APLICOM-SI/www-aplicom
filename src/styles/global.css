@@ -355,8 +355,7 @@ h3 { font-size: 1.15rem; font-weight: 650; }
 .feature { padding: 24px; }
 .feature .ico { width: 44px; height: 44px; border-radius: 12px; background: var(--blue-50); color: var(--blue-600); display: grid; place-items: center; margin-bottom: 14px; }
 .feature .ico svg { width: 22px; height: 22px; }
-.feature p { color: var(--muted); margin: 0 0 12px; font-size: .95rem; }
-.feature a { font-weight: 600; text-decoration: none; font-size: .95rem; }
+.feature p { color: var(--muted); margin: 0; font-size: .95rem; }
 
 .help-band {
   background: linear-gradient(120deg, var(--blue-600), #135f8a);
