@@ -59,6 +59,9 @@ h3 { font-size: 1.15rem; font-weight: 650; }
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
 @media (min-width: 720px) { .wrap { padding: 0 28px; } }
 
+/* Atribut hidden mora premagati display iz razredov (npr. .program { display: flex }). */
+[hidden] { display: none !important; }
+
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ---------- Glava ---------- */
