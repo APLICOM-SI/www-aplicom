@@ -14,4 +14,4 @@ Program je namenjen iskanju podatkov o poslovnih subjektih v Sloveniji. Vsebuje 
 
 Podatke osvežujemo mesečno.
 
-Po registraciji programa MEDUZA lahko do podatkov dostopate tudi iz ostalih naših programov (Posli, GLAVNA, OBRESTI). Dovolj je, da pri vnosu nove stranke zapišete njegovo davčno številko ali naziv. Program prepiše vse potrebne podatke iz podatkov programa MEDUZA. Prav tako lahko v programu na enostaven način preverite pravilnost podatkov že vnešene stranke.
+Po registraciji programa Meduza lahko do podatkov dostopate tudi iz ostalih naših programov (Posli, Glavna, Obresti). Dovolj je, da pri vnosu nove stranke zapišete njegovo davčno številko ali naziv. Program prepiše vse potrebne podatke iz podatkov programa Meduza. Prav tako lahko v programu na enostaven način preverite pravilnost podatkov že vnešene stranke.

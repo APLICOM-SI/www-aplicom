@@ -8,25 +8,25 @@
       "enota": ""
     },
     {
-      "oznaka": "GLAVNA",
+      "oznaka": "Glavna",
       "opis": "Glavna knjiga s stroškovnimi mesti.",
       "cena": 180.0,
       "enota": ""
     },
     {
-      "oznaka": "BLAGAJNA",
+      "oznaka": "Blagajna",
       "opis": "Registrska blagajna.",
       "cena": 140.0,
       "enota": ""
     },
     {
-      "oznaka": "OBRESTI",
+      "oznaka": "Obresti",
       "opis": "Izračun obresti.",
       "cena": 115.0,
       "enota": ""
     },
     {
-      "oznaka": "Posli + GLAVNA + OBRESTI",
+      "oznaka": "Posli + Glavna + Obresti",
       "opis": "Kompletno poslovanje za podjetja ali samostojne podjetnike z dvostavnim knjigovodstvom. Obresti so v celotnem paketu brezplačno.",
       "cena": 690.0,
       "enota": ""
@@ -86,43 +86,43 @@
       "enota": ""
     },
     {
-      "oznaka": "PRNWND",
+      "oznaka": "Prnwnd",
       "opis": "Program za izpis na Windows tiskalnike, predogled izpisov, pretvorba izpisov v PDF, RTF ali XML, pošiljanje izpisov po e-pošti, podpisovanje izpisanih PDF dokumentov.",
       "cena": 77.0,
       "enota": ""
     },
     {
-      "oznaka": "MEDUZA",
-      "opis": "Letna licenca za uporabo podatkov o vseh poslovnih subjektih v RS, osveževana mesečno, z možnostjo neposrednega dostopa iz programov Posli, GLAVNA, OBRESTI in BLAGAJNA.",
+      "oznaka": "Meduza",
+      "opis": "Letna licenca za uporabo podatkov o vseh poslovnih subjektih v RS, osveževana mesečno, z možnostjo neposrednega dostopa iz programov Posli, Glavna, Obresti in Blagajna.",
       "cena": 93.0,
       "enota": ""
     },
     {
-      "oznaka": "INVENTURA",
+      "oznaka": "Inventura",
       "opis": "Program za izdelavo inventurnega zapisnika v programu Posli (maloprodaja in veleprodaja).",
       "cena": 100.0,
       "enota": ""
     },
     {
-      "oznaka": "INVENTURA za Blagajno",
+      "oznaka": "Inventura za Blagajno",
       "opis": "Inventura v trgovini s samostojno Blagajno",
       "cena": 50.0,
       "enota": ""
     },
     {
-      "oznaka": "UVOZ IZPISKOV",
+      "oznaka": "Uvoz izpiskov",
       "opis": "Uvoz izpiskov iz elektronske banke, Zbirnega centra ali eRačuna (prejete fakture) v program Posli (enoletna licenca).",
       "cena": 174.0,
       "enota": ""
     },
     {
-      "oznaka": "APLWOO",
+      "oznaka": "AplWoo",
       "opis": "Povezava med programom Posli in spletno trgovino WooCommerce.",
       "cena": 25.0,
       "enota": "/mesec"
     },
     {
-      "oznaka": "POMOČ (MINUTA)",
+      "oznaka": "Pomoč (minuta)",
       "opis": "Pomoč preko internetne povezave (razen v primeru, ko program v rdečem okvirju javi napako). **Minimalni obračunski interval je 15 minut.**",
       "cena": 1.2,
       "enota": ""
@@ -151,5 +151,5 @@
       "cena_vec": 156.0
     }
   ],
-  "opomba": "Dodatna instalacija je 70% cene programa razen za programa BLAGAJNA in INVENTURA.\n\nNajmanjša možna cena dodatne instalacije je 150 EUR.\n\nVse cene v cenikih so v EUR in veljajo do preklica (za točne cene na dan nakupa se pozanimajte prek telefona). V cenah ni vračunan 22% davek na dodano vrednost (DDV)."
+  "opomba": "Dodatna instalacija je 70% cene programa razen za programa Blagajna in Inventura.\n\nNajmanjša možna cena dodatne instalacije je 150 EUR.\n\nVse cene v cenikih so v EUR in veljajo do preklica (za točne cene na dan nakupa se pozanimajte prek telefona). V cenah ni vračunan 22% davek na dodano vrednost (DDV)."
 }

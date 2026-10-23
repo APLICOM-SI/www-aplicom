@@ -11,10 +11,10 @@ vrstni_red: 8
 arhiv: false
 ---
 
-Če ste pri svojem delu že naleteli na težavo, da vaš DOS program ne more pisati na tiskalnik, ker le-ta nima podpore za DOS, bodisi je priključen na USB izhodna vrata ali pa je to eden iz omrežnih tiskalnikov, potem lahko program **PRNWND** reši vaše težave.\
-**Kako PRNWND deluje ?** \
-PRNWND deluje v ozadju na lokalnem računalniku. Pri prvem startu program kreira devet delovnih map, ki služijo kot vhodno področje za izpise za devet različnih windows tiskalnikov. DOS programi MORAJO imeti poln dostop do teh direktorijev. Program delovne mape kreira v mapi C:\APLICOM\PRNWND\PRTDIR, lahko pa jo kasneje spremenite. Imena map so PRT1,PRT2 do PRT9. DOS program pošlje (kreira) izpisno datoteko v eno od map, program PRNWND jo prebere in jo pošlje na tiskalnik, ki je povezan s to mapo. Po izpisu PRNWND izpisno datoteko izbriše. V primeru, da povezava med delovno mapo in tiskalnikom ni posebej podana, program tiska na default tiskalnik.\
-Če izpis vsebuje osnovne Epson ukazne sekvence, jih program ustrezno interpretira. PRNWND pozna naslednje ukazne sekvence:\
+Če ste pri svojem delu že naleteli na težavo, da vaš DOS program ne more pisati na tiskalnik, ker le-ta nima podpore za DOS, bodisi je priključen na USB izhodna vrata ali pa je to eden iz omrežnih tiskalnikov, potem lahko program **Prnwnd** reši vaše težave.\
+**Kako Prnwnd deluje ?** \
+Prnwnd deluje v ozadju na lokalnem računalniku. Pri prvem startu program kreira devet delovnih map, ki služijo kot vhodno področje za izpise za devet različnih windows tiskalnikov. DOS programi MORAJO imeti poln dostop do teh direktorijev. Program delovne mape kreira v mapi C:\APLICOM\PRNWND\PRTDIR, lahko pa jo kasneje spremenite. Imena map so PRT1,PRT2 do PRT9. DOS program pošlje (kreira) izpisno datoteko v eno od map, program Prnwnd jo prebere in jo pošlje na tiskalnik, ki je povezan s to mapo. Po izpisu Prnwnd izpisno datoteko izbriše. V primeru, da povezava med delovno mapo in tiskalnikom ni posebej podana, program tiska na default tiskalnik.\
+Če izpis vsebuje osnovne Epson ukazne sekvence, jih program ustrezno interpretira. Prnwnd pozna naslednje ukazne sekvence:\
 Carriage Return \
 Form Feed \
 Line Feed \
@@ -56,7 +56,7 @@ kjer je\
 e-mail - naslov za elektronsko pošto\
 Primer:\
 chr(27)+'MAIL#info@aplicom.si#'\
-Program tako zakodirani naslov uporabi samo v primeru, da imate tiskalnik v programu PRNWND nastavljen za izpis na e-pošto.\
+Program tako zakodirani naslov uporabi samo v primeru, da imate tiskalnik v programu Prnwnd nastavljen za izpis na e-pošto.\
 **Izpis v RAW obliki**\
 To obliko tiskanja izberite v primeru, da imate matrični tiskalnik nameščen bodisi na drugem računalniku kot omrežni tiskalnik ali pa je le-ta priključen na printer server. Program pri takem načinu tiskanja vhodne datoteke ne interpretira, pač pa jo samo prenese na izbrani tiskalnik.\
 **Namestitev programa**\
@@ -66,13 +66,13 @@ S klikom na desno tipko miške na ikoni lahko vstopite v nastavitev programa, v 
 **Potrebne spremembe v DOS programih**\
 Ob namestitvi programa program kreira spremenljivko okolja z imenom APLICOM_PRTDIR, ki kaže na mapo, v kateri se nahajajo delovne mape za vseh devet tiskalnikov (default: C:\APLICOM\PRNWND\PRTDIR). \
 V DOS programu tako lahko na enostaven način dobite informacijo, kam naj program pošilja izpise: za tiskalnik 1 na 'APLICOM_PRTDIR'\PRT1, za tiskalnik 2 na 'APLICOM_PRTDIR'\PRT2 in tako naprej.\
-Potem, ko izpisno datoteko kreirate na svojem delovnem področju, jo prepišite na delovno področje programa PRNWND.\
+Potem, ko izpisno datoteko kreirate na svojem delovnem področju, jo prepišite na delovno področje programa Prnwnd.\
 **Težave z antivirusnimi programi**\
 
-Program PRNWND ob zagonu prebere podatke o vseh aktivnih tiskalnikih, zato morajo biti pred njegovim zagonom naloženi tudi vsi aktivni tiskalniški gonilniki. Ob zagonu računalnika antivirusni programi običajno pregledujejo vse programe in pripadajoče knjižnjice, ki se izvajajo ob zagonu. Pogosto se dogaja, da se zaradi tega gonilniki za tiskalnike naložijo prepozno (pred startom programa PRNWND), kar ima za posledico napake pri pisanju preko programa PRNWND. V takih primerih priporočamo povečanje zakasnitve starta programa v nastavitvah programa (prednastavljeno 15 sekund, priporočamo povečanje na 30-45 sekund).
+Program Prnwnd ob zagonu prebere podatke o vseh aktivnih tiskalnikih, zato morajo biti pred njegovim zagonom naloženi tudi vsi aktivni tiskalniški gonilniki. Ob zagonu računalnika antivirusni programi običajno pregledujejo vse programe in pripadajoče knjižnjice, ki se izvajajo ob zagonu. Pogosto se dogaja, da se zaradi tega gonilniki za tiskalnike naložijo prepozno (pred startom programa Prnwnd), kar ima za posledico napake pri pisanju preko programa Prnwnd. V takih primerih priporočamo povečanje zakasnitve starta programa v nastavitvah programa (prednastavljeno 15 sekund, priporočamo povečanje na 30-45 sekund).
 
 **Registracija programa** \
 Neregistrirana verzija na vsaki strani izpisa izpiše podatke o avtorju programa. V primeru, da imate izhod preusmerjen v RTF datoteko, pa izpiše samo prvo stran. \
-Cena registracije programa znaša 45 EUR + DDV za delovno postajo. Razvijalci programske opreme, ki potrebujejo program PRNWND za svoje stranke, lahko sklenejo z nami poseben dogovor o nadaljnji prodaji programa.Registracijo programa lahko opravite telefonsko ali po elektronski pošti. Program registrirate tako, da z desno tipko kliknete na ikono programa in izberete Registracija. Program prikaže kodo, na osnovi katere vam lahko generiramo ključ za registracijo programa. Kodo nam lahko sporočite po telefonu ali po elektronski pošti. Po plačilu programa vam bomo poslali ključ, ki ga boste vnesli skupaj s tekstom lastnika programa. Po uspešni registraciji programa bo program na računalniku deloval brez omejitev.\
+Cena registracije programa znaša 45 EUR + DDV za delovno postajo. Razvijalci programske opreme, ki potrebujejo program Prnwnd za svoje stranke, lahko sklenejo z nami poseben dogovor o nadaljnji prodaji programa.Registracijo programa lahko opravite telefonsko ali po elektronski pošti. Program registrirate tako, da z desno tipko kliknete na ikono programa in izberete Registracija. Program prikaže kodo, na osnovi katere vam lahko generiramo ključ za registracijo programa. Kodo nam lahko sporočite po telefonu ali po elektronski pošti. Po plačilu programa vam bomo poslali ključ, ki ga boste vnesli skupaj s tekstom lastnika programa. Po uspešni registraciji programa bo program na računalniku deloval brez omejitev.\
 **Prenos testne verzije programa**\
-Testno verzijo programa lahko prenesete iz našega strežnika tako, da kliknete na tekst **Prenosi** v zgornjem meniju in nato izberete prenos programa PRNWND.
+Testno verzijo programa lahko prenesete iz našega strežnika tako, da kliknete na tekst **Prenosi** v zgornjem meniju in nato izberete prenos programa Prnwnd.

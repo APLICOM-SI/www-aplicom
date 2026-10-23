@@ -4,6 +4,6 @@ datum: "2015-12-03"
 povzetek: "Programa Blagajna in Posli sta pripravljena za davčno potrjevanje računov."
 ---
 
-Več si lahko preberete na naslednjem naslovu: [DAVČNO POTRJEVANJE RAČUNOV V PROGRAMU BLAGAJNA](http://www.aplicom.si/fu/DAVČNO%20POTRJEVANJE RAČUNOV V PROGRAMU BLAGAJNA.pdf)
+Več si lahko preberete na naslednjem naslovu: [Davčno potrjevanje računov v programu Blagajna](http://www.aplicom.si/fu/DAV%C4%8CNO%20POTRJEVANJE%20RA%C4%8CUNOV%20V%20PROGRAMU%20BLAGAJNA.pdf)
 
-oziroma: [Davčno potrjevanje računov v programu Posli](http://www.aplicom.si/fu/P_RACGOT.pdf)
+oziroma: [Davčno potrjevanje računov v programu Posli](/media/navodila/davcno-potrjevanje-racunov-posli.pdf)

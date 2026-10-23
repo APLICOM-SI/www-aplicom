@@ -11,7 +11,7 @@ vrstni_red: 4
 arhiv: false
 ---
 
-**Program GLAVNA zajema:**
+**Program Glavna zajema:**
 
 - katalog organizacijskih enot - stroškovnih mest
 - katalog temeljnic
