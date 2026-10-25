@@ -25,13 +25,17 @@ Lokalno administracija zapisuje neposredno v datoteke v `src/content/` (brez pri
 
 Program v arhiv prestavite tako, da označite **V arhivu**.
 
-## Objava (Netlify)
+## Objava (Cloudflare Pages)
 
-1. Repozitorij potisnite na GitHub (zaseben).
-2. Netlify → *Add new site → Import from Git* → izberite repozitorij. Nastavitve gradnje so v `netlify.toml`.
-3. Administracija: na GitHubu ustvarite OAuth App (callback `https://api.netlify.com/auth/done`), nato v Netlify *Site configuration → Access & security → OAuth* dodajte GitHub ponudnika. V `public/admin/config.yml` vpišite pravilno ime repozitorija (`backend.repo`).
-4. Urednike dodate kot sodelavce GitHub repozitorija (z vklopljenim 2FA).
-5. Kontaktni obrazec: v Netlify *Forms* vklopite *Enable form detection* in ponovno zgradite stran; v *Forms → Form notifications* nastavite e-poštno obvestilo na aplicom@aplicom.si.
-6. Domena: v Netlify dodajte `www.aplicom.si` in pri registrarju preusmerite DNS.
+1. Cloudflare → *Workers & Pages → Create → Pages → Connect to Git* → GitHub, organizacija APLICOM-SI, repozitorij `www-aplicom`.
+   Nastavitve gradnje: *Framework preset* Astro, *Build command* `npm run build`, *Build output directory* `dist`,
+   spremenljivka okolja `NODE_VERSION` = `22`.
+2. Administracija: GitHub OAuth App (organizacija APLICOM-SI → Settings → Developer settings → OAuth Apps)
+   s *callback URL* `https://<domena>/api/callback`. V Cloudflare projektu → *Settings → Variables and Secrets* dodajte
+   `GITHUB_CLIENT_ID` in `GITHUB_CLIENT_SECRET` (kot *Secret*). Prijavo izvajata `functions/api/auth.js` in `functions/api/callback.js`.
+3. Urednike dodate v ekipo *Uredniki* organizacije APLICOM-SI (vloga *Write* na repozitoriju), z vklopljenim 2FA.
+4. Kontaktni obrazec pošilja prek storitve Web3Forms (javni ključ v `src/pages/kontakt/index.astro`) na aplicom@aplicom.si.
+5. Domena: v Cloudflare projektu *Custom domains* dodajte `www.aplicom.si` in pri upravljavcu DNS dodajte zapis CNAME.
+   Zapisov za e-pošto (MX, SPF …) ne spreminjajte. Ob menjavi domene popravite tudi *callback URL* v GitHub OAuth App.
 
 Stari naslovi `/si/...` se samodejno preusmerijo (`public/_redirects`), stare datoteke `/media/files/...` ostanejo na istih poteh.

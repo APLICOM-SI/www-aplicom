@@ -3,6 +3,10 @@ import Base from '../../layouts/Base.astro';
 import Icon from '../../components/Icon.astro';
 import podjetje from '../../content/nastavitve/podjetje.json';
 
+// Javni ključ storitve Web3Forms (web3forms.com), ki sporočila posreduje na aplicom@aplicom.si.
+// Ključ ni skrivnost – vsebuje ga vsak obrazec.
+const WEB3FORMS_KLJUC = 'TODO-WEB3FORMS-KLJUC';
+
 const zemljevid = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${podjetje.naslov}, ${podjetje.posta}`)}`;
 ---
 <Base title="Kontakt" description="Kontaktni podatki podjetja Aplicom d.o.o., Novo mesto.">
@@ -35,9 +39,12 @@ const zemljevid = `https://www.google.com/maps/search/?api=1&query=${encodeURICo
 
       <div class="card card-pad">
         <h2 style="font-size:1.2rem">Pošljite sporočilo</h2>
-        <form class="form" name="kontakt" method="POST" action="/kontakt/hvala/" data-netlify="true" netlify-honeypot="naslov-url">
-          <input type="hidden" name="form-name" value="kontakt" />
-          <p class="hp"><label>Ne izpolnjujte: <input name="naslov-url" tabindex="-1" autocomplete="off" /></label></p>
+        <form class="form" name="kontakt" method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value={WEB3FORMS_KLJUC} />
+          <input type="hidden" name="subject" value="Sporočilo s spletne strani www.aplicom.si" />
+          <input type="hidden" name="from_name" value="Spletna stran Aplicom" />
+          <input type="hidden" name="redirect" id="f-redirect" value="https://www.aplicom.si/kontakt/hvala/" />
+          <p class="hp"><label>Ne izpolnjujte: <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" /></label></p>
           <div class="row-2">
             <div><label for="f-ime">Ime in priimek</label><input id="f-ime" name="ime_priimek" required autocomplete="name" /></div>
             <div><label for="f-podjetje">Podjetje</label><input id="f-podjetje" name="podjetje" autocomplete="organization" /></div>
@@ -53,3 +60,8 @@ const zemljevid = `https://www.google.com/maps/search/?api=1&query=${encodeURICo
     </div>
   </section>
 </Base>
+
+<script>
+  // Po oddaji se vrnemo na stran »hvala« na istem naslovu (pages.dev ali www.aplicom.si).
+  (document.getElementById('f-redirect') as HTMLInputElement).value = `${location.origin}/kontakt/hvala/`;
+</script>

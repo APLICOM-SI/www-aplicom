@@ -8,6 +8,12 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
+    <script>window.CMS_MANUAL_INIT = true;</script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Prijava teče prek /api/auth na istem naslovu (functions/api/*.js),
+      // zato deluje enako na aplicom.pages.dev in kasneje na www.aplicom.si.
+      CMS.init({ config: { backend: { base_url: window.location.origin, auth_endpoint: 'api/auth' } } });
+    </script>
   </body>
 </html>
