@@ -25,14 +25,14 @@ Lokalno administracija zapisuje neposredno v datoteke v `src/content/` (brez pri
 
 Program v arhiv prestavite tako, da označite **V arhivu**.
 
-## Objava (Cloudflare Pages)
+## Objava (Cloudflare Workers)
 
-1. Cloudflare → *Workers & Pages → Create → Pages → Connect to Git* → GitHub, organizacija APLICOM-SI, repozitorij `www-aplicom`.
-   Nastavitve gradnje: *Framework preset* Astro, *Build command* `npm run build`, *Build output directory* `dist`,
-   spremenljivka okolja `NODE_VERSION` = `22`.
+1. Cloudflare → *Workers & Pages → Create application → Import a repository* → GitHub `APLICOM-SI/www-aplicom`.
+   *Build command* `npm run build`, *Deploy command* `npx wrangler deploy`. Ostalo je v `wrangler.jsonc`:
+   statične datoteke iz `dist/`, prijavo v administracijo izvaja `worker/` (`/api/auth`, `/api/callback`).
 2. Administracija: GitHub OAuth App (organizacija APLICOM-SI → Settings → Developer settings → OAuth Apps)
-   s *callback URL* `https://<domena>/api/callback`. V Cloudflare projektu → *Settings → Variables and Secrets* dodajte
-   `GITHUB_CLIENT_ID` in `GITHUB_CLIENT_SECRET` (kot *Secret*). Prijavo izvajata `functions/api/auth.js` in `functions/api/callback.js`.
+   s *callback URL* `https://<domena>/api/callback`. V Cloudflare → Worker *aplicom* → *Settings → Variables and Secrets*
+   dodajte `GITHUB_CLIENT_ID` in `GITHUB_CLIENT_SECRET` (oba kot *Secret*).
 3. Urednike dodate v ekipo *Uredniki* organizacije APLICOM-SI (vloga *Write* na repozitoriju), z vklopljenim 2FA.
 4. Kontaktni obrazec pošilja prek storitve Web3Forms (javni ključ v `src/pages/kontakt/index.astro`) na aplicom@aplicom.si.
 5. Domena: v Cloudflare projektu *Custom domains* dodajte `www.aplicom.si` in pri upravljavcu DNS dodajte zapis CNAME.

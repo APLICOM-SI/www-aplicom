@@ -1,5 +1,5 @@
 // Prijava v administracijo (Decap CMS) z GitHubom – 1. korak: preusmeritev na GitHub.
-// Potrebni spremenljivki v Cloudflare Pages: GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET.
+// Potrebni skrivnosti v Cloudflare Workers: GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET.
 
 export async function onRequestGet({ request, env }) {
   if (!env.GITHUB_CLIENT_ID) {

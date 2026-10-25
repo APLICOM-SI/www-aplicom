@@ -1,0 +1,15 @@
+// Nastavitve za Cloudflare Workers (gradnja: npm run build, objava: npx wrangler deploy).
+{
+  "name": "aplicom",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // samo prijava gre skozi Worker, vse ostalo so statične datoteke
+    "run_worker_first": ["/api/*"]
+  },
+  // spremenljivke in skrivnosti, vnesene v nadzorni plošči Cloudflare, ostanejo ob objavi
+  "keep_vars": true
+}
