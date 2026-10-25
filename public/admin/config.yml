@@ -152,9 +152,8 @@ collections:
         label: Podatki podjetja
         file: src/content/nastavitve/podjetje.json
         fields:
-          - { label: Naziv, name: naziv, widget: string }
-          - { label: Uradni naziv (domača stran), name: uradni_naziv, widget: string }
-          - { label: Slogan, name: slogan, widget: string }
+          - { label: Skrajšano ime, name: naziv, widget: string, hint: "npr. Aplicom d.o.o." }
+          - { label: Uradni (dolgi) naziv, name: uradni_naziv, widget: string, hint: "npr. APLICOM računalniški inženiring d.o.o." }
           - { label: Naslov, name: naslov, widget: string }
           - { label: Pošta, name: posta, widget: string }
           - { label: Telefoni, name: telefoni, widget: list }

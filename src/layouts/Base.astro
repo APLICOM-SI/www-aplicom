@@ -92,8 +92,7 @@ const tel = (t: string) => 'tel:+386' + t.replace(/\D/g, '').replace(/^0/, '');
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© {new Date().getFullYear()} {podjetje.naziv}. Vse pravice pridržane.</span>
-          <span>{podjetje.slogan}</span>
+          <span>© {new Date().getFullYear()} {podjetje.naziv}{podjetje.naziv.endsWith('.') ? '' : '.'} Vse pravice pridržane.</span>
         </div>
       </div>
     </footer>
