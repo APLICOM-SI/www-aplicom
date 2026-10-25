@@ -153,6 +153,7 @@ collections:
         file: src/content/nastavitve/podjetje.json
         fields:
           - { label: Naziv, name: naziv, widget: string }
+          - { label: Uradni naziv (domača stran), name: uradni_naziv, widget: string }
           - { label: Slogan, name: slogan, widget: string }
           - { label: Naslov, name: naslov, widget: string }
           - { label: Pošta, name: posta, widget: string }
