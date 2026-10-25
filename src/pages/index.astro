@@ -8,6 +8,8 @@ import { datum, zadnjePosodobitve } from '../lib/util';
 const zadnje = await zadnjePosodobitve(6);
 const obvestila = await getEntry('strani', 'obvestila');
 const { Content: Obvestila } = obvestila ? await render(obvestila) : { Content: null };
+// Prazna obvestila v administraciji pomenijo: okvirja in gumba ne prikazujemo.
+const imaObvestila = !!Obvestila && (obvestila?.body ?? '').trim().length > 0;
 
 const podrocja = [
   { ico: 'chart', naslov: 'Poslovanje in plače', opis: 'Program Posli – kompletno poslovanje za podjetja, samostojne podjetnike in računovodske servise: od fakturiranja in zalog do plač, DDV in knjiženja.' },
@@ -22,23 +24,30 @@ const podrocja = [
         <span class="eyebrow">{podjetje.uradni_naziv}</span>
         <h1>Poslovni programi za <em>računovodske servise</em>, podjetja in obrtnike</h1>
         <p class="lead">Od leta 1988 razvijamo programe, ki jim zaupa več kot 700 strank po Sloveniji. Ustvarjamo nove ideje – in jih sproti prilagajamo zakonodaji.</p>
+        {imaObvestila && (
+          <div class="ctas">
+            <a class="btn btn-light" href="#obvestila"><Icon name="alert" /> Pomembna obvestila</a>
+          </div>
+        )}
+      </div>
+      <div class="hero-side">
+        <div class="hero-panel">
+          <h2>Zadnje posodobitve</h2>
+          <ul>
+            {zadnje.map((p) => (
+              <li>
+                <a href={`/prenosi/${p.id}/`}>
+                  <span class="n">{p.data.naziv.split(" - ")[0]}</span>
+                  <span class="v">{p.data.verzija} · {datum(p.data.datum)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div class="ctas">
           <a class="btn btn-light" href="/prenosi/"><Icon name="download" /> Zadnje verzije programov</a>
           <a class="btn btn-outline-light" href="/ceniki/">Cenik</a>
         </div>
-      </div>
-      <div class="hero-panel">
-        <h2>Zadnje posodobitve</h2>
-        <ul>
-          {zadnje.map((p) => (
-            <li>
-              <a href={`/prenosi/${p.id}/`}>
-                <span class="n">{p.data.naziv.split(" - ")[0]}</span>
-                <span class="v">{p.data.verzija} · {datum(p.data.datum)}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   </section>
@@ -50,17 +59,6 @@ const podrocja = [
       <div class="card stat"><b>60+</b><span>računovodskih servisov</span></div>
     </div>
   </div>
-
-  {Obvestila && (
-    <section class="section-tight" style="padding-top:40px">
-      <div class="wrap">
-        <div class="notice">
-          <h2><Icon name="alert" /> Pomembna obvestila</h2>
-          <div class="prose"><Obvestila /></div>
-        </div>
-      </div>
-    </section>
-  )}
 
   <section class="section">
     <div class="wrap">
@@ -79,6 +77,17 @@ const podrocja = [
       </div>
     </div>
   </section>
+
+  {imaObvestila && Obvestila && (
+    <section class="section" style="padding-top:0" id="obvestila">
+      <div class="wrap">
+        <div class="notice">
+          <h2><Icon name="alert" /> Pomembna obvestila</h2>
+          <div class="prose"><Obvestila /></div>
+        </div>
+      </div>
+    </section>
+  )}
 
   <section class="section" style="padding-top:0">
     <div class="wrap">
