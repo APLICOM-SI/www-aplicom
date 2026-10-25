@@ -5,4 +5,3 @@ povzetek: Po dolgo letih smo vizualno osvežili našo spletno stran. Vsebina je
   ostala enaka, z nekaj spremembami, ki omogočajo hiter dostop do strani, ki so
   najbolj pomembna za naše uporabnike.
 ---
-Po dolgo letih smo vizualno osvežili našo spletno stran. Vsebina je ostala enaka, z nekaj spremembami, ki omogočajo hiter dostop do strani, ki so najbolj pomembna za naše uporabnike.
