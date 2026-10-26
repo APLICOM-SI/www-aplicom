@@ -1,11 +1,11 @@
 ---
-naziv: "AplWoo"
-kratek_opis: "Povezava programa Posli s spletno trgovino WooCommerce."
-kategorija: "Pripomočki"
-verzija: "V2.0.54"
-datum: "2025-07-10"
-prenos: "https://www.aplicom.email/prenosi/aplwoo_setup.exe"
-spremembe: "/media/files/2025/07/10/aplwoo-opissprememb.pdf"
+naziv: AplWoo
+verzija: V2.0.55
+datum: 2026-10-26
+prenos: https://www.aplicom.email/prenosi/aplwoo_setup.exe
+spremembe: /media/files/2025/07/10/aplwoo-opissprememb.pdf
+kratek_opis: Povezava programa Posli s spletno trgovino WooCommerce.
+kategorija: Pripomočki
 vrstni_red: 15
 arhiv: false
 ---
