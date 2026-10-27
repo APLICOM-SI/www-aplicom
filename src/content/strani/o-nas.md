@@ -10,4 +10,4 @@ Danes je naše delo usmerjeno predvsem v izdelavo programov za računovodske ser
 
 **Tehnična pomoč**
 
-Telefonsko pomoč nudimo vsem strankam z veljavno garancijsko ali vzdrževalno pogodbo vsak dan od 9:00 do 12:00 ure na telefonski številki (07) 33-42-420 Za registracijske kode kličite (07) 33-42-420 V ostalih terminih lahko sporočila pošljete po elektronski pošti na naslov aplicom@aplicom.si.
+Telefonsko pomoč nudimo vsem strankam z veljavno garancijsko ali vzdrževalno pogodbo vsak dan od 9:00 do 15:00 ure na telefonski številki (07) 33-42-420 Za registracijske kode kličite (07) 33-42-420 V ostalih terminih lahko sporočila pošljete po elektronski pošti na naslov aplicom@aplicom.si.
